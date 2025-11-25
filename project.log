@@ -1,0 +1,42 @@
+[INFO] 2025-11-24 15:39:43 - Testing on device: cuda
+[INFO] 2025-11-24 15:39:43 - Target network updated.
+[INFO] 2025-11-24 15:39:44 - Target network updated.
+[INFO] 2025-11-24 15:39:44 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\seeker_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-11-24 15:39:44 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\hider_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-11-24 15:39:44 - Test Episode 1 started.
+[INFO] 2025-11-24 15:40:14 - Test Episode 1 finished. Total reward - Seeker: 11.0, Hider: -11.0
+[INFO] 2025-11-24 15:40:14 - Test Episode 2 started.
+[INFO] 2025-11-24 15:40:45 - Test Episode 2 finished. Total reward - Seeker: 7.0, Hider: -7.0
+[INFO] 2025-11-24 15:40:45 - Test Episode 3 started.
+[INFO] 2025-11-24 15:41:13 - Test Episode 3 finished. Total reward - Seeker: 5.0, Hider: -5.0
+[INFO] 2025-11-24 15:41:13 - Test Episode 4 started.
+[INFO] 2025-11-24 15:41:44 - Test Episode 4 finished. Total reward - Seeker: 7.0, Hider: -7.0
+[INFO] 2025-11-24 15:41:44 - Test Episode 5 started.
+[INFO] 2025-11-24 15:44:53 - Testing on device: cuda
+[INFO] 2025-11-24 15:44:53 - Target network updated.
+[INFO] 2025-11-24 15:44:53 - Target network updated.
+[INFO] 2025-11-24 15:44:53 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\seeker_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-11-24 15:44:53 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\hider_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-11-24 15:44:53 - Test Episode 1 started.
+[INFO] 2025-11-24 15:45:21 - Test Episode 1 finished. Total reward - Seeker: 9.0, Hider: -9.0
+[INFO] 2025-11-24 15:45:21 - Test Episode 2 started.
+[INFO] 2025-11-24 15:45:52 - Test Episode 2 finished. Total reward - Seeker: 10.0, Hider: -10.0
+[INFO] 2025-11-24 15:45:52 - Test Episode 3 started.
+[INFO] 2025-11-24 15:46:23 - Test Episode 3 finished. Total reward - Seeker: 8.0, Hider: 1.0
+[INFO] 2025-11-24 15:46:23 - Test Episode 4 started.
+[INFO] 2025-11-24 15:46:53 - Test Episode 4 finished. Total reward - Seeker: 9.0, Hider: 9.0
+[INFO] 2025-11-24 15:46:53 - Test Episode 5 started.
+[INFO] 2025-11-24 15:47:24 - Test Episode 5 finished. Total reward - Seeker: 12.0, Hider: -12.0
+[INFO] 2025-11-24 15:47:24 - Test Episode 6 started.
+[INFO] 2025-11-24 15:47:55 - Test Episode 6 finished. Total reward - Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-24 15:47:55 - Test Episode 7 started.
+[INFO] 2025-11-24 15:48:26 - Test Episode 7 finished. Total reward - Seeker: 7.0, Hider: -7.0
+[INFO] 2025-11-24 15:48:26 - Test Episode 8 started.
+[INFO] 2025-11-24 15:48:54 - Test Episode 8 finished. Total reward - Seeker: 8.0, Hider: -8.0
+[INFO] 2025-11-24 15:48:54 - Test Episode 9 started.
+[INFO] 2025-11-24 15:49:24 - Test Episode 9 finished. Total reward - Seeker: 9.0, Hider: -9.0
+[INFO] 2025-11-24 15:49:24 - Test Episode 10 started.
+[INFO] 2025-11-24 15:49:55 - Test Episode 10 finished. Total reward - Seeker: 13.0, Hider: -13.0
+[INFO] 2025-11-24 15:49:55 - Saving video...
+[INFO] 2025-11-24 15:49:57 - Saving GIF...
+[INFO] 2025-11-24 15:50:14 - Testing complete. Video and GIF saved.

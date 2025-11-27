@@ -40,3 +40,1669 @@
 [INFO] 2025-11-24 15:49:55 - Saving video...
 [INFO] 2025-11-24 15:49:57 - Saving GIF...
 [INFO] 2025-11-24 15:50:14 - Testing complete. Video and GIF saved.
+[INFO] 2025-11-27 18:43:38 - Testing on device: cuda
+[INFO] 2025-11-27 18:43:38 - Target network updated.
+[INFO] 2025-11-27 18:43:39 - Target network updated.
+[INFO] 2025-11-27 18:43:39 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\seeker_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-11-27 18:43:39 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\hider_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-11-27 18:43:39 - Test Episode 1 started.
+[INFO] 2025-11-27 18:44:09 - Test Episode 1 finished. Total reward - Seeker: 9.0, Hider: -9.0
+[INFO] 2025-11-27 18:44:09 - Test Episode 2 started.
+[INFO] 2025-11-27 18:44:40 - Test Episode 2 finished. Total reward - Seeker: 6.0, Hider: 14.0
+[INFO] 2025-11-27 18:44:40 - Test Episode 3 started.
+[INFO] 2025-11-27 18:45:12 - Test Episode 3 finished. Total reward - Seeker: 8.0, Hider: -8.0
+[INFO] 2025-11-27 18:45:12 - Test Episode 4 started.
+[INFO] 2025-11-27 18:45:42 - Test Episode 4 finished. Total reward - Seeker: 16.0, Hider: 34.0
+[INFO] 2025-11-27 18:45:42 - Test Episode 5 started.
+[INFO] 2025-11-27 18:46:10 - Test Episode 5 finished. Total reward - Seeker: 5.0, Hider: -5.0
+[INFO] 2025-11-27 18:46:10 - Test Episode 6 started.
+[INFO] 2025-11-27 18:46:41 - Test Episode 6 finished. Total reward - Seeker: 3.0, Hider: -3.0
+[INFO] 2025-11-27 18:46:41 - Test Episode 7 started.
+[INFO] 2025-11-27 18:47:12 - Test Episode 7 finished. Total reward - Seeker: 8.0, Hider: -8.0
+[INFO] 2025-11-27 18:47:12 - Test Episode 8 started.
+[INFO] 2025-11-27 18:47:43 - Test Episode 8 finished. Total reward - Seeker: 13.0, Hider: -13.0
+[INFO] 2025-11-27 18:47:43 - Test Episode 9 started.
+[INFO] 2025-11-27 18:48:13 - Test Episode 9 finished. Total reward - Seeker: 8.0, Hider: -8.0
+[INFO] 2025-11-27 18:48:13 - Test Episode 10 started.
+[INFO] 2025-11-27 18:48:44 - Test Episode 10 finished. Total reward - Seeker: 5.0, Hider: -5.0
+[INFO] 2025-11-27 18:48:44 - Saving video...
+[INFO] 2025-11-27 18:48:46 - Saving GIF...
+[INFO] 2025-11-27 18:49:00 - Testing complete. Video and GIF saved.
+[INFO] 2025-11-27 19:07:14 - Testing on device: cuda
+[INFO] 2025-11-27 19:07:14 - Target network updated.
+[INFO] 2025-11-27 19:07:15 - Target network updated.
+[INFO] 2025-11-27 19:07:15 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\seeker_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-11-27 19:07:15 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\hider_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-11-27 19:07:15 - Test Episode 1 started.
+[INFO] 2025-11-27 19:07:48 - Test Episode 1 finished. Total reward - Seeker: 14.0, Hider: -14.0
+[INFO] 2025-11-27 19:07:48 - Test Episode 2 started.
+[INFO] 2025-11-27 19:08:21 - Test Episode 2 finished. Total reward - Seeker: 14.0, Hider: -14.0
+[INFO] 2025-11-27 19:08:21 - Test Episode 3 started.
+[INFO] 2025-11-27 19:08:55 - Test Episode 3 finished. Total reward - Seeker: 12.0, Hider: -12.0
+[INFO] 2025-11-27 19:08:55 - Test Episode 4 started.
+[INFO] 2025-11-27 19:09:28 - Test Episode 4 finished. Total reward - Seeker: 10.0, Hider: -10.0
+[INFO] 2025-11-27 19:09:28 - Test Episode 5 started.
+[INFO] 2025-11-27 19:10:01 - Test Episode 5 finished. Total reward - Seeker: 10.0, Hider: -10.0
+[INFO] 2025-11-27 19:10:01 - Test Episode 6 started.
+[INFO] 2025-11-27 19:10:34 - Test Episode 6 finished. Total reward - Seeker: 3.0, Hider: -3.0
+[INFO] 2025-11-27 19:10:34 - Test Episode 7 started.
+[INFO] 2025-11-27 19:11:08 - Test Episode 7 finished. Total reward - Seeker: 5.0, Hider: -5.0
+[INFO] 2025-11-27 19:11:08 - Test Episode 8 started.
+[INFO] 2025-11-27 19:11:41 - Test Episode 8 finished. Total reward - Seeker: 4.0, Hider: -4.0
+[INFO] 2025-11-27 19:11:41 - Test Episode 9 started.
+[INFO] 2025-11-27 19:12:14 - Test Episode 9 finished. Total reward - Seeker: 18.0, Hider: -18.0
+[INFO] 2025-11-27 19:12:14 - Test Episode 10 started.
+[INFO] 2025-11-27 19:12:47 - Test Episode 10 finished. Total reward - Seeker: 15.0, Hider: -15.0
+[INFO] 2025-11-27 19:12:47 - Saving video...
+[INFO] 2025-11-27 19:12:50 - Saving GIF...
+[INFO] 2025-11-27 19:13:14 - Testing complete. Video and GIF saved.
+[INFO] 2025-11-27 19:20:55 - Simple Interactive Test Started!
+[INFO] 2025-11-27 19:25:06 - Simple Interactive Test Started!
+[INFO] 2025-11-27 19:25:19 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:24 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:25 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:25 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:26 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:26 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:27 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:28 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:28 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:42 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:43 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:43 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:43 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:43 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:44 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:44 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:44 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:45 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:46 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:46 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:47 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:47 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:47 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:47 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:47 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:47 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:48 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:48 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:51 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:53 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:54 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:54 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:54 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:55 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:55 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:55 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:55 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:55 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:55 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:56 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:56 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:56 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:56 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:57 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:57 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:57 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:58 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:58 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:58 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:58 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:25:59 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:01 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:01 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:02 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:03 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:04 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:04 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:13 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:13 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:15 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:15 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:15 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:15 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:15 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:19 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:19 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:19 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:20 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:20 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:20 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:20 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:21 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:21 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:21 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:22 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:22 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:22 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:22 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:28 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:28 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:28 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:29 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:30 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:30 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:30 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:30 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:30 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:30 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:30 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:30 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:31 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:31 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:32 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:33 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:33 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:34 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:34 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:34 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:34 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:34 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:34 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:35 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:35 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:35 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:36 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:36 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:37 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:37 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:37 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:37 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:37 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:38 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:38 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:38 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:38 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:38 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:38 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:39 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:39 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:39 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:39 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:39 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:40 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:45 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:45 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:45 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:45 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:46 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:46 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:46 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:46 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:46 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:46 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:47 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:47 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:48 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:48 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:55 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:55 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:55 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:56 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:56 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:57 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:58 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:26:58 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:26:58 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:01 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:01 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:02 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:02 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:27:02 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:02 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:27:02 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:02 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:27:02 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:02 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:27:02 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:03 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:27:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:03 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:27:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:03 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:27:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:04 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:04 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:04 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:04 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:05 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:05 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:05 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:05 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:06 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:06 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:06 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:06 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:06 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:07 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:07 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:07 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:07 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:07 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:09 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:09 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:10 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:10 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:10 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:27:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:30:31 - Simple Interactive Test Started!
+[INFO] 2025-11-27 19:30:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:33 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:30:34 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:30:34 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:30:36 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:39 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:39 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:30:39 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:30:40 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:30:40 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:30:40 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:40 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:40 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:40 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:40 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:41 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:41 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:41 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:41 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:41 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:45 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:45 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:46 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:46 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:46 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:49 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:50 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:50 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:50 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:51 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:51 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:52 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:52 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:55 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:55 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:55 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:55 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:55 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:55 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:56 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:56 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:56 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:56 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:56 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:56 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:56 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:56 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:58 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:58 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:58 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:58 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:58 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:58 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:58 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:58 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:59 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:59 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:59 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:59 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:30:59 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:00 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:00 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:03 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:03 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:03 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:03 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:03 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:03 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:03 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:04 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:04 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:04 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:04 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:04 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:04 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:05 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:05 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:06 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:06 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:06 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:06 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:06 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:06 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:07 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:07 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:08 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:08 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:09 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:09 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:09 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:09 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:09 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:09 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:10 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:10 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:10 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:10 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:10 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:10 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:10 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:10 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:11 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:11 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:12 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:12 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:13 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:31:13 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:14 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:31:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:14 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:31:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:14 - Rewards → Seeker: 1.0, Hider: 0.0
+[INFO] 2025-11-27 19:31:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:14 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:14 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:15 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:15 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:15 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:16 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:16 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:17 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:17 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:17 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:17 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:17 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:17 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:17 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:17 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:17 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:17 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:18 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:18 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:18 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:18 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:18 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:18 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:19 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:19 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:19 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:19 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:19 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:19 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:31:19 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:31:19 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:27 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:27 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:27 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:27 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:28 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:28 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:28 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:28 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:28 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:28 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:28 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:28 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:28 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:28 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:29 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:29 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:29 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:29 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:29 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:29 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:29 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:29 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:29 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:29 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:30 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:30 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:30 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:30 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:31 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:31 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:31 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:31 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:31 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:31 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:31 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:31 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:31 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:31 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:31 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:31 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:32 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:32 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:32 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:32 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:32 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:32 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:32 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:32 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:32 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:32 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:32 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:32 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:32 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:32 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:33 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:33 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:34 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:34 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:34 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:34 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:34 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:34 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:34 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:34 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:35 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:35 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:36 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:36 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:36 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:36 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:36 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:36 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:36 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:36 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:36 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:36 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:37 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:37 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:37 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:37 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:37 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:37 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:38 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:38 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:41 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:41 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:41 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:41 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:41 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:41 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:42 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:42 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:42 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:42 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:42 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:43 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:43 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:43 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:43 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:43 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:44 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:44 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:45 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:45 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:45 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:45 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:45 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:45 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:46 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:46 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:46 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:46 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:46 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:46 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:47 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:47 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:47 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:47 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:48 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:48 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:48 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:48 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:49 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:49 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:49 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:49 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:49 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:49 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:50 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:50 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:50 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:50 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:52 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:52 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:53 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:53 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:54 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:54 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:55 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:55 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:56 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:56 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:57 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:57 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:57 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:36:57 - Rewards → Seeker: 0.0, Hider: 1.0
+[INFO] 2025-11-27 19:36:57 - EPISODE FINISHED! Press R to reset.
+[INFO] 2025-11-27 19:37:01 - Environment reset!
+[INFO] 2025-11-27 19:37:03 - Environment reset!
+[INFO] 2025-11-27 19:37:03 - Environment reset!
+[INFO] 2025-11-27 19:37:04 - Environment reset!
+[INFO] 2025-11-27 19:37:04 - Environment reset!
+[INFO] 2025-11-27 19:37:04 - Environment reset!
+[INFO] 2025-11-27 19:37:04 - Environment reset!
+[INFO] 2025-11-27 19:37:04 - Environment reset!
+[INFO] 2025-11-27 19:37:04 - Environment reset!
+[INFO] 2025-11-27 19:37:04 - Environment reset!
+[INFO] 2025-11-27 19:37:04 - Environment reset!
+[INFO] 2025-11-27 19:37:04 - Environment reset!
+[INFO] 2025-11-27 19:37:07 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:37:07 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:37:07 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:37:07 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:37:08 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:37:08 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:37:08 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:37:08 - Rewards → Seeker: 1.0, Hider: -1.0
+[INFO] 2025-11-27 19:44:00 - PyGame Interactive Test V2 Started!
+[INFO] 2025-11-27 19:44:01 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:03 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:03 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:03 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:11 - seeker grabbed block at (15, 7)
+[INFO] 2025-11-27 19:44:12 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:15 - seeker moved with object to (14,6), object at (14,7)
+[INFO] 2025-11-27 19:44:15 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:19 - seeker moved with object to (13,6), object at (13,7)
+[INFO] 2025-11-27 19:44:19 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:20 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:20 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:23 - seeker moved with object to (12,6), object at (12,7)
+[INFO] 2025-11-27 19:44:23 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:25 - seeker moved with object to (13,7), object at (12,8)
+[INFO] 2025-11-27 19:44:26 - seeker moved with object to (13,8), object at (12,9)
+[INFO] 2025-11-27 19:44:26 - seeker moved with object to (14,9), object at (12,10)
+[INFO] 2025-11-27 19:44:26 - seeker moved with object to (15,10), object at (12,11)
+[INFO] 2025-11-27 19:44:26 - seeker moved with object to (15,11), object at (12,12)
+[INFO] 2025-11-27 19:44:28 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:28 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:28 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:28 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:28 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:29 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:29 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:29 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:30 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:31 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:31 - seeker moved with object to (11,11), object at (12,13)
+[INFO] 2025-11-27 19:44:33 - seeker moved with object to (11,10), object at (12,12)
+[INFO] 2025-11-27 19:44:33 - seeker moved with object to (11,9), object at (12,11)
+[INFO] 2025-11-27 19:44:34 - seeker moved with object to (11,8), object at (12,10)
+[INFO] 2025-11-27 19:44:34 - seeker moved with object to (12,8), object at (13,10)
+[INFO] 2025-11-27 19:44:34 - seeker moved with object to (13,8), object at (14,10)
+[INFO] 2025-11-27 19:44:34 - seeker moved with object to (14,8), object at (15,10)
+[INFO] 2025-11-27 19:44:34 - seeker moved with object to (14,9), object at (15,11)
+[INFO] 2025-11-27 19:44:35 - seeker moved with object to (14,8), object at (15,10)
+[INFO] 2025-11-27 19:44:35 - seeker moved with object to (14,7), object at (15,9)
+[INFO] 2025-11-27 19:44:35 - seeker moved with object to (14,6), object at (15,8)
+[INFO] 2025-11-27 19:44:36 - seeker moved with object to (14,7), object at (15,9)
+[INFO] 2025-11-27 19:44:42 - seeker moved with object to (14,8), object at (15,10)
+[INFO] 2025-11-27 19:44:43 - seeker moved with object to (14,7), object at (15,9)
+[INFO] 2025-11-27 19:44:43 - seeker moved with object to (14,6), object at (15,8)
+[INFO] 2025-11-27 19:44:43 - seeker moved with object to (14,5), object at (15,7)
+[INFO] 2025-11-27 19:44:44 - seeker moved with object to (15,5), object at (16,7)
+[INFO] 2025-11-27 19:44:44 - seeker moved with object to (16,5), object at (17,7)
+[INFO] 2025-11-27 19:44:44 - seeker moved with object to (16,6), object at (17,8)
+[INFO] 2025-11-27 19:44:44 - seeker moved with object to (16,7), object at (17,9)
+[INFO] 2025-11-27 19:44:45 - seeker moved with object to (15,7), object at (16,9)
+[INFO] 2025-11-27 19:44:45 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:45 - seeker moved with object to (14,7), object at (15,9)
+[INFO] 2025-11-27 19:44:45 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:45 - seeker moved with object to (15,7), object at (16,9)
+[INFO] 2025-11-27 19:44:46 - seeker moved with object to (14,7), object at (15,9)
+[INFO] 2025-11-27 19:44:46 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:44:50 - seeker moved with object to (14,6), object at (15,10)
+[INFO] 2025-11-27 19:44:50 - seeker moved with object to (14,7), object at (15,11)
+[INFO] 2025-11-27 19:44:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:44:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:00 - seeker moved with object to (15,0), object at (16,11)
+[INFO] 2025-11-27 19:45:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:00 - seeker released object (wall collision)
+[INFO] 2025-11-27 19:45:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:04 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:04 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:04 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:04 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:04 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:05 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:05 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:06 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:06 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:06 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:06 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:07 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:08 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:09 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:09 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:12 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:19 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:19 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:19 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:20 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:22 - seeker moved onto ramp at (19,10)
+[INFO] 2025-11-27 19:45:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:23 - seeker fell from ramp to ground
+[INFO] 2025-11-27 19:45:23 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:23 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:24 - seeker moved onto ramp at (19,10)
+[INFO] 2025-11-27 19:45:24 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:24 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:25 - seeker fell from ramp to ground
+[INFO] 2025-11-27 19:45:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:25 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:31 - seeker grabbed ramp at (19, 10)
+[INFO] 2025-11-27 19:45:31 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:32 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:32 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:40 - seeker moved with object to (18,9), object at (19,9)
+[INFO] 2025-11-27 19:45:40 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:40 - seeker moved with object to (18,8), object at (19,8)
+[INFO] 2025-11-27 19:45:40 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:41 - seeker moved with object to (18,7), object at (19,7)
+[INFO] 2025-11-27 19:45:41 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:41 - seeker moved with object to (18,6), object at (19,6)
+[INFO] 2025-11-27 19:45:41 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:41 - seeker moved with object to (18,5), object at (19,5)
+[INFO] 2025-11-27 19:45:41 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:42 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:42 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:43 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:43 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:43 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:44 - seeker moved with object to (18,4), object at (19,4)
+[INFO] 2025-11-27 19:45:44 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:44 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:44 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:45 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:45 - seeker moved with object to (18,3), object at (19,3)
+[INFO] 2025-11-27 19:45:45 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:46 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:46 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:50 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:50 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:51 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:53 - seeker moved with object to (17,3), object at (18,3)
+[INFO] 2025-11-27 19:45:53 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:53 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:53 - seeker moved with object to (16,3), object at (17,3)
+[INFO] 2025-11-27 19:45:53 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:53 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:53 - seeker moved with object to (15,3), object at (16,3)
+[INFO] 2025-11-27 19:45:53 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:53 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:54 - seeker moved with object to (14,3), object at (15,3)
+[INFO] 2025-11-27 19:45:54 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:54 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:54 - seeker moved with object to (13,3), object at (14,3)
+[INFO] 2025-11-27 19:45:54 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:54 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:54 - seeker moved with object to (12,3), object at (13,3)
+[INFO] 2025-11-27 19:45:54 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:45:54 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:56 - seeker moved with object to (12,4), object at (13,4)
+[INFO] 2025-11-27 19:45:56 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:56 - seeker moved with object to (12,5), object at (13,5)
+[INFO] 2025-11-27 19:45:56 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:57 - seeker moved with object to (12,6), object at (13,6)
+[INFO] 2025-11-27 19:45:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:57 - seeker moved with object to (12,7), object at (13,7)
+[INFO] 2025-11-27 19:45:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:57 - seeker moved with object to (12,8), object at (13,8)
+[INFO] 2025-11-27 19:45:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:59 - seeker moved with object to (13,8), object at (14,8)
+[INFO] 2025-11-27 19:45:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:45:59 - seeker moved with object to (14,8), object at (15,8)
+[INFO] 2025-11-27 19:45:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:01 - seeker moved with object to (14,9), object at (15,9)
+[INFO] 2025-11-27 19:46:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:04 - seeker moved with object to (14,10), object at (15,10)
+[INFO] 2025-11-27 19:46:04 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:05 - seeker moved with object to (14,11), object at (15,11)
+[INFO] 2025-11-27 19:46:05 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:06 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:10 - seeker moved onto ramp at (15,11)
+[INFO] 2025-11-27 19:46:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:12 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:12 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:16 - seeker fell from ramp to ground
+[INFO] 2025-11-27 19:46:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:17 - seeker moved onto ramp at (15,11)
+[INFO] 2025-11-27 19:46:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:18 - seeker fell from ramp to ground
+[INFO] 2025-11-27 19:46:18 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:19 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:20 - seeker moved onto ramp at (15,11)
+[INFO] 2025-11-27 19:46:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:20 - seeker fell from ramp to ground
+[INFO] 2025-11-27 19:46:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:21 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:21 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:22 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:22 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:23 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:23 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:26 - seeker released object (wall collision)
+[INFO] 2025-11-27 19:46:26 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:27 - seeker grabbed block at (9, 6)
+[INFO] 2025-11-27 19:46:27 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:27 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:27 - seeker moved with object to (10,7), object at (9,7)
+[INFO] 2025-11-27 19:46:27 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:28 - seeker moved with object to (10,8), object at (9,8)
+[INFO] 2025-11-27 19:46:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:28 - seeker moved with object to (10,9), object at (9,9)
+[INFO] 2025-11-27 19:46:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:28 - seeker moved with object to (11,9), object at (10,9)
+[INFO] 2025-11-27 19:46:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:29 - seeker moved with object to (10,9), object at (9,9)
+[INFO] 2025-11-27 19:46:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:30 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:30 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:31 - seeker moved with object to (10,10), object at (9,10)
+[INFO] 2025-11-27 19:46:31 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:31 - seeker moved with object to (9,10), object at (8,10)
+[INFO] 2025-11-27 19:46:31 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:32 - seeker moved with object to (9,9), object at (8,9)
+[INFO] 2025-11-27 19:46:32 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:32 - seeker moved with object to (10,9), object at (9,9)
+[INFO] 2025-11-27 19:46:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:32 - seeker moved with object to (10,10), object at (9,10)
+[INFO] 2025-11-27 19:46:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:32 - seeker moved with object to (9,10), object at (8,10)
+[INFO] 2025-11-27 19:46:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:32 - seeker moved with object to (9,9), object at (8,9)
+[INFO] 2025-11-27 19:46:32 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:33 - seeker moved with object to (10,9), object at (9,9)
+[INFO] 2025-11-27 19:46:33 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:33 - seeker moved with object to (10,10), object at (9,10)
+[INFO] 2025-11-27 19:46:33 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:33 - seeker moved with object to (9,10), object at (8,10)
+[INFO] 2025-11-27 19:46:33 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:33 - seeker moved with object to (9,9), object at (8,9)
+[INFO] 2025-11-27 19:46:33 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:33 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:33 - seeker moved with object to (10,9), object at (9,9)
+[INFO] 2025-11-27 19:46:33 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:34 - seeker moved with object to (11,9), object at (10,9)
+[INFO] 2025-11-27 19:46:34 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:34 - seeker moved with object to (12,9), object at (11,9)
+[INFO] 2025-11-27 19:46:34 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:34 - seeker moved with object to (12,10), object at (11,10)
+[INFO] 2025-11-27 19:46:34 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:34 - seeker moved with object to (12,11), object at (11,11)
+[INFO] 2025-11-27 19:46:34 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:35 - seeker moved with object to (12,12), object at (11,12)
+[INFO] 2025-11-27 19:46:35 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:35 - seeker moved with object to (13,12), object at (12,12)
+[INFO] 2025-11-27 19:46:35 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:35 - seeker moved with object to (13,13), object at (12,13)
+[INFO] 2025-11-27 19:46:35 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:35 - seeker moved with object to (14,13), object at (13,13)
+[INFO] 2025-11-27 19:46:35 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:35 - seeker moved with object to (13,13), object at (12,13)
+[INFO] 2025-11-27 19:46:35 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:41 - seeker moved with object to (12,13), object at (11,13)
+[INFO] 2025-11-27 19:46:41 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:42 - seeker moved with object to (13,13), object at (12,13)
+[INFO] 2025-11-27 19:46:42 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:43 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:43 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:44 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:44 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:44 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:44 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:44 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:45 - seeker moved with object to (17,15), object at (12,12)
+[INFO] 2025-11-27 19:46:45 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:46:45 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:45 - seeker moved with object to (16,15), object at (11,12)
+[INFO] 2025-11-27 19:46:45 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:46 - seeker moved with object to (17,15), object at (12,12)
+[INFO] 2025-11-27 19:46:46 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:46:46 - seeker moved with object to (17,16), object at (12,13)
+[INFO] 2025-11-27 19:46:46 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:57 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:52:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:58 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:52:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:58 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:52:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:59 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:52:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:59 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:52:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:59 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:52:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:52:59 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:52:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:01 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:03 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:06 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:06 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:08 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:10 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:11 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:12 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:12 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:12 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:12 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:12 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:12 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:12 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:12 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:16 - seeker moved onto ramp at (15,11)
+[INFO] 2025-11-27 19:53:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:19 - seeker fell from ramp to ground
+[INFO] 2025-11-27 19:53:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:21 - seeker moved onto ramp at (15,11)
+[INFO] 2025-11-27 19:53:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:22 - seeker fell from ramp to ground
+[INFO] 2025-11-27 19:53:22 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:24 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:24 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:53:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:55:36 - PyGame test V2 closed.
+[INFO] 2025-11-27 19:56:20 - PyGame Interactive Test V2 Started!
+[INFO] 2025-11-27 19:56:37 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:56:38 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:56:40 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:56:40 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:56:40 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:56:41 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:56:44 - Rewards: Seeker=1.0, Hider=-1.0
+[INFO] 2025-11-27 19:56:53 - hider grabbed block at (11, 11)
+[INFO] 2025-11-27 19:56:54 - hider moved with object to (10,10), object at (11,10)
+[INFO] 2025-11-27 19:56:55 - hider moved with object to (10,9), object at (11,9)
+[INFO] 2025-11-27 19:56:55 - hider moved with object to (9,9), object at (10,9)
+[INFO] 2025-11-27 19:56:55 - hider moved with object to (8,9), object at (9,9)
+[INFO] 2025-11-27 19:56:55 - hider moved with object to (8,8), object at (9,8)
+[INFO] 2025-11-27 19:56:55 - hider moved with object to (9,8), object at (10,8)
+[INFO] 2025-11-27 19:56:55 - hider moved with object to (9,9), object at (10,9)
+[INFO] 2025-11-27 19:56:56 - hider moved with object to (10,9), object at (11,9)
+[INFO] 2025-11-27 19:56:56 - hider moved with object to (10,10), object at (11,10)
+[INFO] 2025-11-27 19:56:56 - hider moved with object to (11,10), object at (12,10)
+[INFO] 2025-11-27 19:56:56 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:56:56 - hider moved with object to (11,11), object at (12,11)
+[INFO] 2025-11-27 19:56:56 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:56:57 - hider moved with object to (12,11), object at (13,11)
+[INFO] 2025-11-27 19:56:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:56:57 - hider moved with object to (13,11), object at (14,11)
+[INFO] 2025-11-27 19:56:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:56:57 - hider moved with object to (14,11), object at (15,11)
+[INFO] 2025-11-27 19:56:57 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:56:58 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:56:59 - hider released object (wall collision)
+[INFO] 2025-11-27 19:56:59 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:00 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:01 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:02 - hider grabbed ramp at (17, 6)
+[INFO] 2025-11-27 19:57:02 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:03 - hider moved with object to (16,7), object at (17,7)
+[INFO] 2025-11-27 19:57:03 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:04 - hider moved with object to (16,8), object at (17,8)
+[INFO] 2025-11-27 19:57:04 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:04 - hider moved with object to (16,9), object at (17,9)
+[INFO] 2025-11-27 19:57:04 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:04 - hider moved with object to (15,9), object at (16,9)
+[INFO] 2025-11-27 19:57:04 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:05 - hider moved with object to (15,10), object at (16,10)
+[INFO] 2025-11-27 19:57:05 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:05 - hider moved with object to (15,11), object at (16,11)
+[INFO] 2025-11-27 19:57:05 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:06 - hider moved with object to (15,10), object at (16,10)
+[INFO] 2025-11-27 19:57:06 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:07 - hider moved with object to (16,10), object at (17,10)
+[INFO] 2025-11-27 19:57:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:07 - hider moved with object to (16,11), object at (17,11)
+[INFO] 2025-11-27 19:57:07 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:08 - hider moved with object to (16,10), object at (17,10)
+[INFO] 2025-11-27 19:57:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:08 - hider moved with object to (17,10), object at (18,10)
+[INFO] 2025-11-27 19:57:08 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:09 - hider moved with object to (16,10), object at (17,10)
+[INFO] 2025-11-27 19:57:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:09 - hider moved with object to (16,11), object at (17,11)
+[INFO] 2025-11-27 19:57:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:09 - hider moved with object to (15,11), object at (16,11)
+[INFO] 2025-11-27 19:57:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:09 - hider moved with object to (15,10), object at (16,10)
+[INFO] 2025-11-27 19:57:09 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:13 - hider moved with object to (14,10), object at (15,10)
+[INFO] 2025-11-27 19:57:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:13 - hider released object (object collision)
+[INFO] 2025-11-27 19:57:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:13 - hider grabbed ramp at (15, 10)
+[INFO] 2025-11-27 19:57:13 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:14 - hider moved with object to (14,9), object at (15,9)
+[INFO] 2025-11-27 19:57:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:14 - hider moved with object to (14,10), object at (15,10)
+[INFO] 2025-11-27 19:57:14 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:15 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:16 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:17 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:18 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:19 - hider climbed onto ramp at (15,10), now at z=1
+[INFO] 2025-11-27 19:57:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:19 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:20 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:20 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:20 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:21 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:21 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:21 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:21 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:22 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:22 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:22 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:22 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:22 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:22 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:22 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:22 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:23 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:23 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:23 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:24 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:24 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:24 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:24 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:24 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:24 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:24 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:25 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:25 - Rewards: Seeker=0.0, Hider=1.0
+[INFO] 2025-11-27 19:57:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:25 - hider fell from z=1 to ground
+[INFO] 2025-11-27 19:57:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:25 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:26 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:27 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:27 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:27 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:27 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:27 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:27 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:27 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:28 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:29 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:30 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:30 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:30 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:30 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:30 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:30 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:30 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:31 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:31 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:31 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:31 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:31 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:31 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:32 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:33 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:33 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:34 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:57:34 - Episode finished! Press R to reset.
+[INFO] 2025-11-27 19:58:15 - PyGame test V2 closed.

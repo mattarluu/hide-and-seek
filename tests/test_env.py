@@ -20,7 +20,7 @@ output_gif_path = "test_animation.gif"  # Output GIF file
 # Initialize environment
 env = HideAndSeekEnv()
 state_dim = 3  # (x, y, direction)
-agent_action_dim = 7  # Both agents have 7 actions
+agent_action_dim = 9  # Both agents now have 9 actions
 
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -41,7 +41,7 @@ hider_agent.q_network.to(device)
 # Do not update target networks or call train_step() in test mode.
 # In test mode, we use a greedy policy (i.e. ε = 0) and do not perform any learning.
 
-fig, ax = plt.subplots(figsize=(8, 8))
+fig, ax = plt.subplots(figsize=(10, 10))
 frames = []
 
 for episode in range(num_test_episodes):
@@ -62,16 +62,11 @@ for episode in range(num_test_episodes):
         else:
             action_seeker = 0  # Default action if seeker not yet active
 
-        hider_action_int = hider_agent.select_action(hider_state.cpu().numpy())
-        # Map hider actions: if < 4, it's a movement; otherwise, map to door action string.
-        if hider_action_int < 4:
-            action_hider = hider_action_int
-        else:
-            action_hider = {4: "toggle_door", 5: "lock", 6: "unlock"}[hider_action_int]
+        action_hider = hider_agent.select_action(hider_state.cpu().numpy())
 
         actions = {"seeker": action_seeker, "hider": action_hider}
 
-        next_state, done, door_rewards = env.step(actions)
+        next_state, done, step_rewards = env.step(actions)
 
         # Render the environment and capture an RGB frame.
         render_environment(ax, env)
@@ -86,9 +81,9 @@ for episode in range(num_test_episodes):
         next_seeker_state = torch.tensor(next_state['seeker']['state'], dtype=torch.float32).to(device)
         next_hider_state = torch.tensor(next_state['hider']['state'], dtype=torch.float32).to(device)
 
-        # Use door_rewards as the step reward.
-        reward_seeker = door_rewards.get("seeker", 0.0)
-        reward_hider = door_rewards.get("hider", 0.0)
+        # Use step_rewards
+        reward_seeker = step_rewards.get("seeker", 0.0)
+        reward_hider = step_rewards.get("hider", 0.0)
         total_reward_seeker += reward_seeker
         total_reward_hider += reward_hider
 

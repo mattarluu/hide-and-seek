@@ -29,24 +29,57 @@ def draw_grid(ax, grid_size):
 
 def draw_room(ax, room):
     """
-    Draw the room interior, walls, and door cell.
+    Draw the room interior, walls, and opening.
 
     Args:
         ax (matplotlib.axes.Axes): The axis to draw on.
-        room: A Room object (from env.room) with methods get_all_cells() and attributes wall_cells and door.
+        room: A Room object (from env.room) with methods get_all_cells() and attributes wall_cells and opening_cells.
     """
     # Draw room interior
     room_cells = room.get_all_cells()
     for cell in room_cells:
         rect = patches.Rectangle(cell, 1, 1, facecolor='lightyellow', edgecolor='black', lw=0.5)
         ax.add_patch(rect)
+    
+    # Draw walls
     for wall in room.wall_cells:
         rect = patches.Rectangle(wall, 1, 1, facecolor='gray', edgecolor='black')
         ax.add_patch(rect)
-    door_color = 'green' if room.door.is_open and not room.door.is_locked else 'red'
-    door_rect = patches.Rectangle(room.door.position, 1, 1, facecolor=door_color, edgecolor='black')
-    ax.add_patch(door_rect)
-    ax.text(room.door.position[0] + 0.2, room.door.position[1] + 0.5, "Door", color='white', fontsize=8)
+    
+    # Highlight opening cells
+    for cell in room.opening_cells:
+        rect = patches.Rectangle(cell, 1, 1, facecolor='lightgreen', edgecolor='black', lw=2)
+        ax.add_patch(rect)
+        ax.text(cell[0] + 0.3, cell[1] + 0.5, "O", color='darkgreen', fontsize=10, fontweight='bold')
+
+
+def draw_objects(ax, blocks, ramp):
+    """
+    Draw movable objects (blocks and ramp) on the grid.
+    
+    Args:
+        ax (matplotlib.axes.Axes): The axis to draw on.
+        blocks (list): List of Block objects.
+        ramp: Ramp object.
+    """
+    # Draw blocks
+    for block in blocks:
+        x, y = block.position
+        rect = patches.Rectangle((x, y), 1, 1, facecolor='brown', edgecolor='black', lw=2)
+        ax.add_patch(rect)
+        ax.text(x + 0.3, y + 0.5, "B", color='white', fontsize=12, fontweight='bold')
+    
+    # Draw ramp
+    if ramp:
+        x, y = ramp.position
+        # Draw ramp as a triangle
+        triangle = patches.Polygon(
+            [(x, y + 1), (x + 1, y + 1), (x + 1, y)],
+            facecolor='orange', edgecolor='black', lw=2
+        )
+        ax.add_patch(triangle)
+        ax.text(x + 0.3, y + 0.6, "R", color='white', fontsize=10, fontweight='bold')
+
 
 
 
@@ -119,10 +152,11 @@ def render_environment(ax, env):
     ax.set_ylim(0, env.grid_size)
     ax.set_aspect('equal')
     ax.invert_yaxis()
-    ax.set_title("Hide and Seek Environment")
+    ax.set_title("Hide and Seek Environment (20x20)")
 
     draw_grid(ax, env.grid_size)
     draw_room(ax, env.room)
+    draw_objects(ax, env.blocks, env.ramp)
 
     # Draw hider always.
     draw_agent(ax, env.hider, env.moves, "Hider", "blue")

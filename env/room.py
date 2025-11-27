@@ -1,108 +1,57 @@
 """
 env/room.py
 
-This module encapsulates the room layout and door properties for the hide and seek environment.
-It includes two classes:
-    - Door: Manages the door's position, state (open/closed), and lock status.
-    - Room: Defines the room boundaries, computes wall cells (excluding the door cell),
-            and provides helper methods to check if a given cell is part of the room, a wall, or the door.
+This module encapsulates the room layout for the hide and seek environment.
+The room has an opening in the top-left corner (3 cells removed) instead of a door.
 
-The room is defined as a 4x4 area located in the bottom right corner of a 10x10 grid.
-The door is located on the left wall, at the center cell.
+The room is defined as an 8x8 area located in the bottom right corner of a 20x20 grid.
+The opening is in the top-left corner (3 wall cells removed).
 """
 
 from utils.logger import log_debug
 
-class Door:
-    """
-    Represents a door with a position and state.
-    """
-    def __init__(self, position):
-        self.position = position
-        self.is_open = True
-        self.is_locked = False
-        # log_debug(f"Door created at {self.position}. Initial state: open={self.is_open}, locked={self.is_locked}")
-
-    def toggle(self):
-        """
-        Toggle the door's state between open and closed.
-        """
-        self.is_open = not self.is_open
-        # log_debug(f"Door at {self.position} toggled to {'open' if self.is_open else 'closed'}.")
-
-    def lock(self):
-        """
-        Lock the door.
-        """
-        if not self.is_locked:
-            self.is_locked = True
-            # log_debug(f"Door at {self.position} locked.")
-        # else:
-            # log_debug(f"Door at {self.position} is already locked.")
-
-    def unlock(self):
-        """
-        Unlock the door.
-        """
-        if self.is_locked:
-            self.is_locked = False
-            # log_debug(f"Door at {self.position} unlocked.")
-        # else:
-            # log_debug(f"Door at {self.position} is already unlocked.")
-
-
 class Room:
     """
-    Represents a room within the grid.
+    Represents a room within the grid with an opening in the top-left corner.
     """
-    def __init__(self, top_left, width, height, door_side="left"):
+    def __init__(self, top_left, width, height):
         """
-        Initialize the room.
+        Initialize the room with an opening in the top-left corner.
 
         Args:
             top_left (tuple): (x, y) coordinate for the top-left corner.
             width (int): Width of the room.
             height (int): Height of the room.
-            door_side (str): Side of the room where the door is located ("left", "right", "top", "bottom").
         """
         self.top_left = top_left
         self.width = width
         self.height = height
 
-        # Determine door position based on door_side
-        if door_side == "left":
-            door_x = top_left[0]
-            door_y = top_left[1] + height // 2
-        elif door_side == "right":
-            door_x = top_left[0] + width - 1
-            door_y = top_left[1] + height // 2
-        elif door_side == "top":
-            door_x = top_left[0] + width // 2
-            door_y = top_left[1]
-        elif door_side == "bottom":
-            door_x = top_left[0] + width // 2
-            door_y = top_left[1] + height - 1
-        else:
-            raise ValueError("Invalid door_side. Choose from 'left', 'right', 'top', 'bottom'.")
-
-        self.door = Door((door_x, door_y))
-
-        # Compute wall cells: all cells on the perimeter except the door cell.
+        # Compute wall cells: all cells on the perimeter
         self.wall_cells = set()
         for x in range(top_left[0], top_left[0] + width):
-            self.wall_cells.add((x, top_left[1]))                   # Top wall
-            self.wall_cells.add((x, top_left[1] + height - 1))        # Bottom wall
+            self.wall_cells.add((x, top_left[1]))                      # Top wall
+            self.wall_cells.add((x, top_left[1] + height - 1))         # Bottom wall
         for y in range(top_left[1], top_left[1] + height):
-            self.wall_cells.add((top_left[0], y))                    # Left wall
+            self.wall_cells.add((top_left[0], y))                      # Left wall
             self.wall_cells.add((top_left[0] + width - 1, y))          # Right wall
 
-        # Remove the door cell from the wall cells if present
-        if self.door.position in self.wall_cells:
-            self.wall_cells.remove(self.door.position)
+        # Remove the 3 cells in the top-left corner to create the opening
+        # Top-left corner cells: (top_left[0], top_left[1]), (top_left[0]+1, top_left[1]), (top_left[0], top_left[1]+1)
+        opening_cells = [
+            (top_left[0], top_left[1]),
+            (top_left[0] + 1, top_left[1]),
+            (top_left[0], top_left[1] + 1)
+        ]
+        for cell in opening_cells:
+            if cell in self.wall_cells:
+                self.wall_cells.remove(cell)
+        
+        self.opening_cells = opening_cells
 
         # log_debug(f"Room created at {self.top_left} with size {width}x{height}.")
         # log_debug(f"Room wall cells: {self.wall_cells}")
-        # log_debug(f"Door position: {self.door.position}")
+        # log_debug(f"Opening cells: {self.opening_cells}")
 
     def is_inside(self, cell):
         """
@@ -118,22 +67,18 @@ class Room:
         """
         return cell in self.wall_cells
 
-    def is_door(self, cell):
+    def is_opening(self, cell):
         """
-        Check if a cell is the door cell.
+        Check if a cell is part of the opening.
         """
-        return cell == self.door.position
+        return cell in self.opening_cells
 
     def blocks_vision(self, cell):
         """
         Determine if a cell blocks vision.
-        A cell blocks vision if it is a wall cell, or if it is the door cell and the door is closed.
+        A cell blocks vision if it is a wall cell.
         """
-        if cell in self.wall_cells:
-            return True
-        if self.is_door(cell) and not self.door.is_open:
-            return True
-        return False
+        return cell in self.wall_cells
 
     def get_all_cells(self):
         """

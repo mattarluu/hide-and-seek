@@ -30,7 +30,7 @@ target_update_frequency = 10
 
 env = HideAndSeekEnv()
 state_dim = 3
-agent_action_dim = 7  # Both agents have 7 actions
+agent_action_dim = 9  # Both agents now have 9 actions (4 move + 4 push + 1 climb)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 log_info(f"Training on device: {device}")
@@ -44,8 +44,6 @@ penalties_seeker_list = []
 penalties_hider_list = []
 invalid_moves_seeker_list = []
 invalid_moves_hider_list = []
-
-door_mapping = {4: "toggle_door", 5: "lock", 6: "unlock"}
 
 for episode in range(num_episodes):
     state = env.reset()
@@ -65,11 +63,8 @@ for episode in range(num_episodes):
             action_seeker = seeker_agent.select_action(seeker_state.cpu().numpy())
         else:
             action_seeker = 0
-        hider_action_int = hider_agent.select_action(hider_state.cpu().numpy())
-        if hider_action_int < 4:
-            action_hider = hider_action_int
-        else:
-            action_hider = door_mapping[hider_action_int]
+        action_hider = hider_agent.select_action(hider_state.cpu().numpy())
+        
         actions = {"seeker": action_seeker, "hider": action_hider}
 
         next_state, done, step_rewards = env.step(actions)
@@ -82,7 +77,7 @@ for episode in range(num_episodes):
         total_reward_hider += reward_hider
 
         seeker_agent.store_experience(seeker_state, action_seeker, reward_seeker, next_seeker_state, done)
-        hider_agent.store_experience(hider_state, hider_action_int, reward_hider, next_hider_state, done)
+        hider_agent.store_experience(hider_state, action_hider, reward_hider, next_hider_state, done)
 
         seeker_state = next_seeker_state
         hider_state = next_hider_state

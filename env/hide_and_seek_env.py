@@ -230,53 +230,123 @@ class HideAndSeekEnv(gym.Env):
         
         return False, None, None
 
-    def compute_visible_cells(self, state, max_distance=15, num_rays=7):
+    def compute_visible_cells(self, state, max_distance=15):
         """
-        Compute visible cells using triangular FOV.
-        State is now (x, y, direction, z).
+        Compute visible cells using ray-casting with proper occlusion.
+        Objects block vision - you cannot see through walls, blocks, or ramps.
+        
+        Args:
+            state: (x, y, direction, z)
+            max_distance: Maximum vision distance
+            
+        Returns:
+            List of visible cell positions
         """
         x, y, d, z = state
-        visible = {(x, y)}
+        visible = {(x, y)}  # Agent can always see their own position
         
-        for i in range(1, max_distance + 1):
-            if d == 0:  # facing up
-                row_y = y - i
-                for dx in range(-i, i + 1):
-                    cell = (x + dx, row_y)
-                    if not (0 <= cell[0] < self.grid_size and 0 <= cell[1] < self.grid_size):
+        # Define FOV based on direction (triangular cone)
+        if d == 0:  # facing up
+            # For each distance
+            for dist in range(1, max_distance + 1):
+                target_y = y - dist
+                if target_y < 0:
+                    break
+                
+                # For each cell in the row at this distance
+                for dx in range(-dist, dist + 1):
+                    target_x = x + dx
+                    if not (0 <= target_x < self.grid_size):
                         continue
-                    visible.add(cell)
-                    if self._blocks_vision(cell):
-                        break
-            elif d == 1:  # facing right
-                row_x = x + i
-                for dy in range(-i, i + 1):
-                    cell = (row_x, y + dy)
-                    if not (0 <= cell[0] < self.grid_size and 0 <= cell[1] < self.grid_size):
+                    
+                    # Cast ray from agent to target cell
+                    if self._can_see_cell(x, y, target_x, target_y):
+                        visible.add((target_x, target_y))
+        
+        elif d == 1:  # facing right
+            for dist in range(1, max_distance + 1):
+                target_x = x + dist
+                if target_x >= self.grid_size:
+                    break
+                
+                for dy in range(-dist, dist + 1):
+                    target_y = y + dy
+                    if not (0 <= target_y < self.grid_size):
                         continue
-                    visible.add(cell)
-                    if self._blocks_vision(cell):
-                        break
-            elif d == 2:  # facing down
-                row_y = y + i
-                for dx in range(-i, i + 1):
-                    cell = (x + dx, row_y)
-                    if not (0 <= cell[0] < self.grid_size and 0 <= cell[1] < self.grid_size):
+                    
+                    if self._can_see_cell(x, y, target_x, target_y):
+                        visible.add((target_x, target_y))
+        
+        elif d == 2:  # facing down
+            for dist in range(1, max_distance + 1):
+                target_y = y + dist
+                if target_y >= self.grid_size:
+                    break
+                
+                for dx in range(-dist, dist + 1):
+                    target_x = x + dx
+                    if not (0 <= target_x < self.grid_size):
                         continue
-                    visible.add(cell)
-                    if self._blocks_vision(cell):
-                        break
-            elif d == 3:  # facing left
-                row_x = x - i
-                for dy in range(-i, i + 1):
-                    cell = (row_x, y + dy)
-                    if not (0 <= cell[0] < self.grid_size and 0 <= cell[1] < self.grid_size):
+                    
+                    if self._can_see_cell(x, y, target_x, target_y):
+                        visible.add((target_x, target_y))
+        
+        elif d == 3:  # facing left
+            for dist in range(1, max_distance + 1):
+                target_x = x - dist
+                if target_x < 0:
+                    break
+                
+                for dy in range(-dist, dist + 1):
+                    target_y = y + dy
+                    if not (0 <= target_y < self.grid_size):
                         continue
-                    visible.add(cell)
-                    if self._blocks_vision(cell):
-                        break
+                    
+                    if self._can_see_cell(x, y, target_x, target_y):
+                        visible.add((target_x, target_y))
         
         return list(visible)
+    
+    def _can_see_cell(self, x1, y1, x2, y2):
+        """
+        Check if cell (x2, y2) is visible from (x1, y1) using ray-casting.
+        Returns False if any blocking object is in the way.
+        """
+        # Use Bresenham's line algorithm to trace ray
+        dx = abs(x2 - x1)
+        dy = abs(y2 - y1)
+        
+        sx = 1 if x2 > x1 else -1
+        sy = 1 if y2 > y1 else -1
+        
+        err = dx - dy
+        
+        cx, cy = x1, y1
+        
+        while True:
+            # If we reached the target, it's visible
+            if (cx, cy) == (x2, y2):
+                return True
+            
+            # If current cell blocks vision (and it's not the target), ray is blocked
+            if (cx, cy) != (x1, y1) and self._blocks_vision((cx, cy)):
+                return False
+            
+            # Move to next cell in line
+            if cx == x2 and cy == y2:
+                break
+            
+            e2 = 2 * err
+            
+            if e2 > -dy:
+                err -= dy
+                cx += sx
+            
+            if e2 < dx:
+                err += dx
+                cy += sy
+        
+        return True
     
     def _blocks_vision(self, cell):
         """Check if a cell blocks vision."""
@@ -371,6 +441,11 @@ class HideAndSeekEnv(gym.Env):
         # Process actions for both agents
         for agent_key in ["seeker", "hider"]:
             action = actions.get(agent_key)
+            
+            # Skip if no action provided (None)
+            if action is None:
+                continue
+            
             if agent_key == "seeker" and not self.seeker_active:
                 continue
             
@@ -430,6 +505,18 @@ class HideAndSeekEnv(gym.Env):
                         continue
                     if self.ramp and self.ramp.position == new_pos:
                         continue
+                    
+                    # IMPORTANT: Release grabbed object if moving normally
+                    grabbed = self.hider_grabbed if agent_key == "hider" else self.seeker_grabbed
+                    if grabbed is not None:
+                        obj = self.get_grabbed_object(agent_key)
+                        if obj:
+                            obj.release()
+                        if agent_key == "hider":
+                            self.hider_grabbed = None
+                        else:
+                            self.seeker_grabbed = None
+                        log_info(f"{agent_key} released object (moved without it)")
                     
                     agent.update_state(x=new_x, y=new_y, direction=action, z=0)
                 
@@ -535,7 +622,34 @@ class HideAndSeekEnv(gym.Env):
                         continue
                     
                     # Check if agent can move to new position
+                    # Agent cannot move onto walls
                     if self.room.is_wall(new_agent_pos):
+                        # Release object
+                        obj.release()
+                        if agent_key == "hider":
+                            self.hider_grabbed = None
+                        else:
+                            self.seeker_grabbed = None
+                        log_info(f"{agent_key} released object (agent wall collision)")
+                        continue
+                    
+                    # Agent cannot move onto other objects (except the one being moved)
+                    agent_collision = False
+                    for block in self.blocks:
+                        if block != obj and block.position == new_agent_pos:
+                            agent_collision = True
+                            break
+                    if not agent_collision and self.ramp and self.ramp != obj and self.ramp.position == new_agent_pos:
+                        agent_collision = True
+                    
+                    if agent_collision:
+                        # Release object
+                        obj.release()
+                        if agent_key == "hider":
+                            self.hider_grabbed = None
+                        else:
+                            self.seeker_grabbed = None
+                        log_info(f"{agent_key} released object (agent object collision)")
                         continue
                     
                     # Move both agent and object

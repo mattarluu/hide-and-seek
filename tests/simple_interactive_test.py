@@ -7,6 +7,7 @@ Interactive test with ALL new mechanics:
 - Lock mechanics (hider only)
 - Visual indicators for height and locked blocks
 - Climbing: Only via ramp, then can walk on all z=1 surfaces
+- FIELD OF VIEW: Blue shade for hider, Red shade for seeker
 
 INSTALLATION:
 pip install pygame
@@ -26,8 +27,14 @@ SEEKER (Red):
 
 GENERAL:
   R           - Reset
+  V           - Toggle FOV (Field of View)
   ESC         - Quit
   SPACE       - Pause
+
+VISUAL:
+  Blue transparent area - Hider's field of view
+  Red transparent area  - Seeker's field of view
+  Purple area          - Overlapping vision
 """
 
 import sys
@@ -89,6 +96,7 @@ class PyGameInteractiveTestV2:
         self.paused = False
         self.last_action_hider = "None"
         self.last_action_seeker = "None"
+        self.show_fov = True  # Toggle for field of view visibility
         
         log_info("PyGame Interactive Test V2 Started!")
         
@@ -99,7 +107,7 @@ class PyGameInteractiveTestV2:
                 return False
             
             if event.type == pygame.KEYDOWN:
-                actions = {"seeker": 0, "hider": 0}
+                actions = {"seeker": None, "hider": None}  # Use None instead of 0
                 execute = False
                 
                 # ESC to quit
@@ -120,6 +128,12 @@ class PyGameInteractiveTestV2:
                 if event.key == pygame.K_SPACE:
                     self.paused = not self.paused
                     log_info(f"{'PAUSED' if self.paused else 'RESUMED'}")
+                    continue
+                
+                # V to toggle field of view
+                if event.key == pygame.K_v:
+                    self.show_fov = not self.show_fov
+                    log_info(f"Field of View: {'ON' if self.show_fov else 'OFF'}")
                     continue
                 
                 if self.paused:
@@ -333,6 +347,45 @@ class PyGameInteractiveTestV2:
                 grab_text = self.tiny_font.render(f"[{self.env.ramp.grabbed_by[0].upper()}]", True, WHITE)
                 self.screen.blit(grab_text, (rx * self.cell_size + 2, ry * self.cell_size + 2))
     
+    def draw_field_of_view(self):
+        """Draw the field of view for both agents with transparent overlays."""
+        # Create transparent surfaces
+        fov_surface = pygame.Surface((self.grid_width, 20 * self.cell_size))
+        fov_surface.set_alpha(40)  # Transparency level (0-255, lower = more transparent)
+        
+        # Draw hider's field of view in blue
+        if self.env.hider:
+            visible_cells = self.env.compute_visible_cells(self.env.hider.get_state())
+            for cell_x, cell_y in visible_cells:
+                rect = pygame.Rect(
+                    cell_x * self.cell_size,
+                    cell_y * self.cell_size,
+                    self.cell_size,
+                    self.cell_size
+                )
+                pygame.draw.rect(fov_surface, BLUE, rect)
+        
+        # Blit hider's FOV
+        self.screen.blit(fov_surface, (0, 0))
+        
+        # Draw seeker's field of view in red
+        if self.env.seeker_active and self.env.seeker:
+            fov_surface_seeker = pygame.Surface((self.grid_width, 20 * self.cell_size))
+            fov_surface_seeker.set_alpha(40)
+            
+            visible_cells = self.env.compute_visible_cells(self.env.seeker.get_state())
+            for cell_x, cell_y in visible_cells:
+                rect = pygame.Rect(
+                    cell_x * self.cell_size,
+                    cell_y * self.cell_size,
+                    self.cell_size,
+                    self.cell_size
+                )
+                pygame.draw.rect(fov_surface_seeker, RED, rect)
+            
+            # Blit seeker's FOV
+            self.screen.blit(fov_surface_seeker, (0, 0))
+    
     def draw_agent(self, agent, color, light_color, label):
         """Draw an agent with height indicator."""
         x, y, d, z = agent.get_state()
@@ -401,8 +454,13 @@ class PyGameInteractiveTestV2:
             ("", BLACK),
             ("GENERAL", BLACK),
             ("R - Reset", BLACK),
+            ("V - Toggle FOV", BLACK),
             ("SPACE - Pause", BLACK),
             ("ESC - Quit", BLACK),
+            ("", BLACK),
+            (f"FOV: {'ON' if self.show_fov else 'OFF'}", GREEN if self.show_fov else GRAY),
+            ("Blue - Hider FOV", BLUE if self.show_fov else GRAY),
+            ("Red - Seeker FOV", RED if self.show_fov else GRAY),
         ]
         
         for text, color in info_lines:
@@ -472,6 +530,11 @@ class PyGameInteractiveTestV2:
         # Draw environment
         self.draw_grid()
         self.draw_room()
+        
+        # Draw field of view BEFORE objects and agents (as background overlay)
+        if self.show_fov:
+            self.draw_field_of_view()
+        
         self.draw_objects()
         
         # Draw agents

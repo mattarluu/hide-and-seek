@@ -405,8 +405,8 @@ class HideAndSeekEnv(gym.Env):
     def spawn_seeker(self):
         def get_valid_position():
             while True:
-                x = np.random.randint(0, self.grid_size)
-                y = np.random.randint(0, self.grid_size)
+                x = 0
+                y = 0
                 pos = (x, y)
                 if not self.room.is_wall(pos):
                     if not any(block.position == pos for block in self.blocks):

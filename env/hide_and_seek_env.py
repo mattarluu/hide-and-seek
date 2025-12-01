@@ -65,6 +65,10 @@ class HideAndSeekEnv(gym.Env):
         self.max_steps = 200  # Total episode length
         self.hiding_phase_steps = 40  # Steps for hider to hide before seeker appears
         self.step_count = 0
+        
+        # Victory conditions
+        self.visibility_count = 0  # How many steps seeker has seen hider
+        self.capture_distance = 1  # Distance for physical capture
 
         # Agents
         self.hider = None
@@ -362,6 +366,7 @@ class HideAndSeekEnv(gym.Env):
     def reset(self):
         self.step_count = 0
         self.seeker_active = False
+        self.visibility_count = 0  # Reset visibility counter
         
         # Reinitialize objects
         self._initialize_objects()
@@ -670,13 +675,27 @@ class HideAndSeekEnv(gym.Env):
                 agent.update_state(z=new_z)
                 log_info(f"{agent_key} fell from z={z} to z={new_z}")
         
-        # Vision-based rewards (only during seeking phase)
+        # Vision-based rewards and capture detection (only during seeking phase)
+        done = False
         if self.seeker_active:
             visible_seeker = set(self.compute_visible_cells(self.seeker.get_state()))
             hider_pos = self.hider.get_state()[:2]
+            seeker_pos = self.seeker.get_state()[:2]
+            
+            # Check if seeker sees hider
             if hider_pos in visible_seeker:
-                rewards["seeker"] += 2.0  # Increased reward for finding hider
-                rewards["hider"] += -2.0  # Penalty for being seen
+                rewards["seeker"] += 2.0  # Reward for seeing
+                rewards["hider"] -= 2.0   # Penalty for being seen
+                self.visibility_count += 1
+            
+            # Check for CAPTURE (seeker very close to hider)
+            distance = abs(hider_pos[0] - seeker_pos[0]) + abs(hider_pos[1] - seeker_pos[1])
+            if distance <= self.capture_distance:
+                # SEEKER WINS by capture!
+                done = True
+                rewards["seeker"] += 100.0
+                rewards["hider"] -= 100.0
+                log_info(f"🎯 CAPTURED! Seeker caught Hider at step {self.step_count}!")
         
         # Phase-based rewards
         if not self.seeker_active:
@@ -707,7 +726,24 @@ class HideAndSeekEnv(gym.Env):
             # This encourages active searching
             rewards["seeker"] += 0.01
         
-        done = (self.step_count >= self.max_steps)
+        # Check for time limit (if not already captured)
+        if not done and self.step_count >= self.max_steps:
+            done = True
+            
+            # Final rewards based on visibility
+            seeking_steps = self.step_count - self.hiding_phase_steps
+            visibility_ratio = self.visibility_count / max(seeking_steps, 1)
+            
+            if visibility_ratio > 0.3:  # Seen more than 30% of time
+                # SEEKER WINS by visibility
+                rewards["seeker"] += 50.0
+                rewards["hider"] -= 50.0
+                log_info(f"🔴 SEEKER WINS! Hider visible {self.visibility_count}/{seeking_steps} steps ({visibility_ratio:.1%})")
+            else:
+                # HIDER WINS by evasion
+                rewards["hider"] += 50.0
+                rewards["seeker"] -= 50.0
+                log_info(f"🔵 HIDER WINS! Only visible {self.visibility_count}/{seeking_steps} steps ({visibility_ratio:.1%})")
         
         obs = {
             "seeker": {

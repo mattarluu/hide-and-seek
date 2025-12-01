@@ -12,8 +12,8 @@ from utils.visualization import render_environment
 from utils.logger import log_info
 
 # Test parameters
-num_test_episodes = 10  # Number of episodes to visualize
-max_steps_per_episode = 50  # Max steps per episode for visualization
+num_test_episodes = 5  # Number of episodes to visualize (reduced since they're longer now)
+# No max_steps limit - episodes run until done (capture or 200 steps)
 output_video_path = "test_video.mp4"  # Output video file
 output_gif_path = "test_animation.gif"  # Output GIF file
 
@@ -55,12 +55,16 @@ for episode in range(num_test_episodes):
 
     log_info(f"Test Episode {episode + 1} started.")
 
-    for step in range(max_steps_per_episode):
+    step = 0
+    done = False
+    while not done:
+        step += 1
+        
         # Select actions using a greedy policy (ε=0)
         if env.seeker_active:
             action_seeker = seeker_agent.select_action(seeker_state.cpu().numpy())
         else:
-            action_seeker = 0  # Default action if seeker not yet active
+            action_seeker = None  # No action if seeker not yet active
 
         action_hider = hider_agent.select_action(hider_state.cpu().numpy())
 
@@ -90,10 +94,26 @@ for episode in range(num_test_episodes):
         seeker_state = next_seeker_state
         hider_state = next_hider_state
 
-        if done:
-            break
-
-    log_info(f"Test Episode {episode + 1} finished. Total reward - Seeker: {total_reward_seeker}, Hider: {total_reward_hider}")
+    # Determine winner and victory type
+    if total_reward_seeker > total_reward_hider:
+        winner = "SEEKER"
+        if step < env.max_steps:
+            victory_type = "CAPTURE"
+        else:
+            victory_type = "VISIBILITY"
+    else:
+        winner = "HIDER"
+        victory_type = "EVASION"
+    
+    log_info(f"Test Episode {episode + 1} finished after {step} steps.")
+    log_info(f"  Winner: {winner} ({victory_type})")
+    log_info(f"  Rewards - Seeker: {total_reward_seeker:.1f}, Hider: {total_reward_hider:.1f}")
+    
+    # Show visibility stats if seeker was active
+    if env.seeker_active:
+        seeking_steps = step - env.hiding_phase_steps
+        visibility_ratio = env.visibility_count / max(seeking_steps, 1) * 100
+        log_info(f"  Visibility: {env.visibility_count}/{seeking_steps} steps ({visibility_ratio:.1f}%)")
 
 # Save frames as a video (RGB)
 log_info("Saving video...")

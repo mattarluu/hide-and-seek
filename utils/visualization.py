@@ -89,12 +89,12 @@ def draw_agent(ax, agent, moves, label, color):
 
     Args:
         ax (matplotlib.axes.Axes): The axis to draw on.
-        agent: An agent object with a get_state() method returning (x, y, direction).
+        agent: An agent object with a get_state() method returning (x, y, direction, z).
         moves (dict): Dictionary mapping direction indices to (dx, dy) deltas.
         label (str): Label to display near the agent.
         color (str): Color used for drawing the agent.
     """
-    x, y, d = agent.get_state()
+    x, y, d, z = agent.get_state()  # Now unpacks 4 values
     agent_circle = patches.Circle((x + 0.5, y + 0.5), 0.3, color=color)
     ax.add_patch(agent_circle)
     dx, dy = moves.get(d, (0, 0))
@@ -108,12 +108,12 @@ def draw_agent_fov(ax, agent, fov_offsets, color='cyan', alpha=0.3):
 
     Args:
         ax (matplotlib.axes.Axes): The axis to draw on.
-        agent: An agent object with get_state() returning (x, y, direction).
+        agent: An agent object with get_state() returning (x, y, direction, z).
         fov_offsets (dict): A dictionary mapping directions (0,1,2,3) to lists of (dx, dy) offsets for FOV cells.
         color (str): The color for the FOV overlay.
         alpha (float): The transparency level of the FOV overlay.
     """
-    x, y, d = agent.get_state()
+    x, y, d, z = agent.get_state()  # Now unpacks 4 values
     offsets = fov_offsets.get(d, [])
     for dx, dy in offsets:
         cell = (x + dx, y + dy)

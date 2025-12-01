@@ -479,6 +479,19 @@ class PyGameInteractiveTestV2:
         
         status_lines = [
             f"Step: {self.env.step_count}/{self.env.max_steps}",
+            "",
+        ]
+        
+        # Phase indicator
+        if not self.env.seeker_active:
+            remaining_hide = self.env.hiding_phase_steps - self.env.step_count
+            status_lines.append(f"🔵 HIDING PHASE")
+            status_lines.append(f"Seeker in: {remaining_hide} steps")
+        else:
+            status_lines.append(f"🔴 SEEKING PHASE")
+        
+        status_lines.extend([
+            "",
             f"Hider: ({hx},{hy}) z={hz}",
             f"Seeker: ({sx},{sy}) z={sz}",
             "",
@@ -490,7 +503,7 @@ class PyGameInteractiveTestV2:
             "Climb: Only ramp!",
             "Walk: All z=1",
             "",
-        ]
+        ])
         
         # Grabbed status
         if self.env.hider_grabbed:
@@ -553,7 +566,7 @@ class PyGameInteractiveTestV2:
         while running:
             running = self.handle_input()
             self.render()
-            self.clock.tick(30)  # 30 FPS
+            self.clock.tick(50)  # 50 FPS
         
         pygame.quit()
         log_info("PyGame test V2 closed.")

@@ -2722,3 +2722,115 @@
 [INFO] 2025-12-01 14:55:39 - Episode finished! Press R to reset.
 [INFO] 2025-12-01 14:55:39 - Episode finished! Press R to reset.
 [INFO] 2025-12-01 14:55:40 - PyGame test V2 closed.
+[INFO] 2025-12-01 14:58:29 - Testing on device: cuda
+[INFO] 2025-12-01 14:58:30 - Target network updated.
+[INFO] 2025-12-01 14:58:30 - Target network updated.
+[INFO] 2025-12-01 14:58:30 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\seeker_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-12-01 14:58:30 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\hider_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-12-01 14:58:30 - Test Episode 1 started.
+[INFO] 2025-12-01 15:02:01 - Testing on device: cuda
+[INFO] 2025-12-01 15:02:01 - Target network updated.
+[INFO] 2025-12-01 15:02:02 - Target network updated.
+[INFO] 2025-12-01 15:02:02 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\seeker_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-12-01 15:02:02 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\hider_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-12-01 15:02:02 - Test Episode 1 started.
+[INFO] 2025-12-01 15:02:02 - hider grabbed block at (5, 12)
+[INFO] 2025-12-01 15:02:03 - hider released object (moved without it)
+[INFO] 2025-12-01 15:02:08 - seeker grabbed block at (1, 15)
+[INFO] 2025-12-01 15:02:08 - seeker released object (moved without it)
+[INFO] 2025-12-01 15:02:16 - seeker grabbed block at (1, 15)
+[INFO] 2025-12-01 15:02:17 - seeker released object (moved without it)
+[INFO] 2025-12-01 15:10:30 - Testing on device: cuda
+[INFO] 2025-12-01 15:10:30 - Target network updated.
+[INFO] 2025-12-01 15:10:31 - Target network updated.
+[INFO] 2025-12-01 15:10:31 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\seeker_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-12-01 15:10:31 - Model file C:\Users\User\Projects\NPUA\multi_agent_hide_and_seek\training\models\hider_dqn_model.pth not found. Starting from scratch.
+[INFO] 2025-12-01 15:10:31 - Test Episode 1 started.
+[INFO] 2025-12-01 15:10:37 - Test Episode 1 finished. Total reward - Seeker: 9.0, Hider: -9.0
+[INFO] 2025-12-01 15:10:37 - Test Episode 2 started.
+[INFO] 2025-12-01 15:10:39 - seeker grabbed block at (2, 4)
+[INFO] 2025-12-01 15:10:39 - seeker moved with object to (3,3), object at (2,3)
+[INFO] 2025-12-01 15:10:39 - seeker released object (moved without it)
+[INFO] 2025-12-01 15:10:43 - Test Episode 2 finished. Total reward - Seeker: 14.0, Hider: -14.0
+[INFO] 2025-12-01 15:10:43 - Test Episode 3 started.
+[INFO] 2025-12-01 15:10:49 - Test Episode 3 finished. Total reward - Seeker: 13.0, Hider: -13.0
+[INFO] 2025-12-01 15:10:49 - Test Episode 4 started.
+[INFO] 2025-12-01 15:10:51 - hider grabbed block at (11, 10)
+[INFO] 2025-12-01 15:10:51 - hider released object (moved without it)
+[INFO] 2025-12-01 15:10:53 - seeker grabbed block at (2, 5)
+[INFO] 2025-12-01 15:10:54 - seeker released object (moved without it)
+[INFO] 2025-12-01 15:10:55 - Test Episode 4 finished. Total reward - Seeker: 6.0, Hider: -1.0
+[INFO] 2025-12-01 15:10:55 - Test Episode 5 started.
+[INFO] 2025-12-01 15:11:04 - Test Episode 5 finished. Total reward - Seeker: 4.0, Hider: -4.0
+[INFO] 2025-12-01 15:11:04 - Test Episode 6 started.
+[INFO] 2025-12-01 15:11:11 - Test Episode 6 finished. Total reward - Seeker: 7.0, Hider: -7.0
+[INFO] 2025-12-01 15:11:11 - Test Episode 7 started.
+[INFO] 2025-12-01 15:11:17 - Test Episode 7 finished. Total reward - Seeker: 0.0, Hider: 50.0
+[INFO] 2025-12-01 15:11:17 - Test Episode 8 started.
+[INFO] 2025-12-01 15:11:23 - Test Episode 8 finished. Total reward - Seeker: 9.0, Hider: 41.0
+[INFO] 2025-12-01 15:11:23 - Test Episode 9 started.
+[INFO] 2025-12-01 15:11:29 - Test Episode 9 finished. Total reward - Seeker: 9.0, Hider: -9.0
+[INFO] 2025-12-01 15:11:29 - Test Episode 10 started.
+[INFO] 2025-12-01 15:11:38 - Test Episode 10 finished. Total reward - Seeker: 6.0, Hider: -6.0
+[INFO] 2025-12-01 15:11:38 - Saving video...
+[INFO] 2025-12-01 15:11:41 - Saving GIF...
+[INFO] 2025-12-01 15:12:01 - Testing complete. Video and GIF saved.
+[INFO] 2025-12-01 15:16:40 - PyGame Interactive Test V2 Started!
+[INFO] 2025-12-01 15:16:48 - Hider locked block at (10, 7)
+[INFO] 2025-12-01 15:16:50 - Hider unlocked block at (10, 7)
+[INFO] 2025-12-01 15:17:10 - PyGame Interactive Test V2 Started!
+[INFO] 2025-12-01 15:17:11 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:11 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:12 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:12 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:12 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:12 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:12 - Rewards: Seeker=2.0, Hider=-2.0
+[INFO] 2025-12-01 15:17:13 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:13 - Rewards: Seeker=2.0, Hider=-2.0
+[INFO] 2025-12-01 15:17:13 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:13 - Rewards: Seeker=2.0, Hider=-2.0
+[INFO] 2025-12-01 15:17:13 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:13 - Rewards: Seeker=2.0, Hider=-2.0
+[INFO] 2025-12-01 15:17:13 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:13 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:14 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:14 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:14 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:14 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:15 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:15 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:16 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:16 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:16 - Rewards: Seeker=0.0, Hider=0.0
+[INFO] 2025-12-01 15:17:33 - PyGame Interactive Test V2 Started!
+[INFO] 2025-12-01 15:17:33 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:34 - Rewards: Seeker=2.0, Hider=-1.7
+[INFO] 2025-12-01 15:17:34 - Rewards: Seeker=2.0, Hider=-1.7
+[INFO] 2025-12-01 15:17:34 - Rewards: Seeker=2.0, Hider=-1.7
+[INFO] 2025-12-01 15:17:35 - Rewards: Seeker=2.0, Hider=-1.7
+[INFO] 2025-12-01 15:17:35 - Rewards: Seeker=2.0, Hider=-1.7
+[INFO] 2025-12-01 15:17:35 - Rewards: Seeker=2.0, Hider=-1.7
+[INFO] 2025-12-01 15:17:35 - Rewards: Seeker=2.0, Hider=-1.7
+[INFO] 2025-12-01 15:17:36 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:36 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:36 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:36 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:36 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:36 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:37 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:37 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:37 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:37 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:37 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:37 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:37 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:37 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:38 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:38 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:38 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:38 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:38 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:38 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:38 - Rewards: Seeker=0.0, Hider=0.3
+[INFO] 2025-12-01 15:17:40 - PyGame test V2 closed.

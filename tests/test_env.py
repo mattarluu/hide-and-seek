@@ -19,8 +19,8 @@ output_gif_path = "test_animation.gif"  # Output GIF file
 
 # Initialize environment
 env = HideAndSeekEnv()
-state_dim = 3  # (x, y, direction)
-agent_action_dim = 9  # Both agents now have 9 actions
+state_dim = 4  # (x, y, direction, z)
+agent_action_dim = 10  # 10 actions now
 
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -70,7 +70,7 @@ for episode in range(num_test_episodes):
 
         # Render the environment and capture an RGB frame.
         render_environment(ax, env)
-        plt.pause(0.5)
+        plt.pause(0.01)  # 100 FPS - Very fast visualization
         frame = np.frombuffer(fig.canvas.tostring_argb(), dtype=np.uint8)
         width, height = fig.canvas.get_width_height()
         frame = frame.reshape((height, width, 4))

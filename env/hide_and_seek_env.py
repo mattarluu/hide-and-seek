@@ -62,7 +62,8 @@ class HideAndSeekEnv(gym.Env):
             3: (-1, 0)   # left
         }
 
-        self.max_steps = 100
+        self.max_steps = 200  # Total episode length
+        self.hiding_phase_steps = 40  # Steps for hider to hide before seeker appears
         self.step_count = 0
 
         # Agents
@@ -433,10 +434,11 @@ class HideAndSeekEnv(gym.Env):
         self.step_count += 1
         rewards = {"seeker": 0.0, "hider": 0.0}
 
-        # Spawn seeker after 10 steps
-        if not self.seeker_active and self.step_count >= 10:
+        # Spawn seeker after hiding phase
+        if not self.seeker_active and self.step_count >= self.hiding_phase_steps:
             self.spawn_seeker()
             self.seeker_active = True
+            log_info(f"SEEKER SPAWNED at step {self.step_count}! Seeking phase begins!")
 
         # Process actions for both agents
         for agent_key in ["seeker", "hider"]:
@@ -668,18 +670,42 @@ class HideAndSeekEnv(gym.Env):
                 agent.update_state(z=new_z)
                 log_info(f"{agent_key} fell from z={z} to z={new_z}")
         
-        # Vision-based rewards
+        # Vision-based rewards (only during seeking phase)
         if self.seeker_active:
             visible_seeker = set(self.compute_visible_cells(self.seeker.get_state()))
             hider_pos = self.hider.get_state()[:2]
             if hider_pos in visible_seeker:
-                rewards["seeker"] += 1.0
-                rewards["hider"] += -1.0
+                rewards["seeker"] += 2.0  # Increased reward for finding hider
+                rewards["hider"] += -2.0  # Penalty for being seen
         
-        # In-room reward
-        hider_pos = self.hider.get_state()[:2]
-        if self.room.is_inside(hider_pos):
-            rewards["hider"] += 1.0
+        # Phase-based rewards
+        if not self.seeker_active:
+            # HIDING PHASE: Reward hider for preparing
+            hider_pos = self.hider.get_state()[:2]
+            
+            # Reward for being in room during hiding phase
+            if self.room.is_inside(hider_pos):
+                rewards["hider"] += 0.5
+            
+            # Small reward for using height advantage
+            _, _, _, z = self.hider.get_state()
+            if z == 1:
+                rewards["hider"] += 0.1
+            
+            # Reward for having blocks locked
+            locked_blocks = sum(1 for b in self.blocks if b.locked)
+            rewards["hider"] += locked_blocks * 0.2
+        else:
+            # SEEKING PHASE: Different rewards
+            hider_pos = self.hider.get_state()[:2]
+            
+            # Reward hider for staying hidden in room
+            if self.room.is_inside(hider_pos):
+                rewards["hider"] += 0.3
+            
+            # Reward seeker for exploring (small reward for movement)
+            # This encourages active searching
+            rewards["seeker"] += 0.01
         
         done = (self.step_count >= self.max_steps)
         

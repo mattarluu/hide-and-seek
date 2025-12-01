@@ -3226,3 +3226,28 @@
 [INFO] 2025-12-01 16:07:32 - Rewards: Seeker=0.0, Hider=0.0
 [INFO] 2025-12-01 16:07:33 - Rewards: Seeker=0.0, Hider=0.0
 [INFO] 2025-12-01 16:07:34 - PyGame test V2 closed.
+[INFO] 2025-12-01 16:12:55 - hider grabbed block at (6, 7)
+[INFO] 2025-12-01 16:12:55 - hider moved with object to (6,7), object at (7,7)
+[INFO] 2025-12-01 16:12:55 - Hider locked block at (7, 7)
+[INFO] 2025-12-01 16:12:55 - hider released object (moved without it)
+[INFO] 2025-12-01 16:12:55 - SEEKER SPAWNED at step 40! Seeking phase begins!
+[INFO] 2025-12-01 16:12:55 - hider climbed onto ramp at (8,6), now at z=1
+[INFO] 2025-12-01 16:12:55 - SEEKER SPAWNED at step 40! Seeking phase begins!
+[INFO] 2025-12-01 16:12:55 - SEEKER SPAWNED at step 40! Seeking phase begins!
+[INFO] 2025-12-01 16:12:55 - SEEKER SPAWNED at step 40! Seeking phase begins!
+[INFO] 2025-12-01 16:12:55 - hider fell from z=1 to ground
+[INFO] 2025-12-01 16:12:55 - hider grabbed ramp at (8, 6)
+[INFO] 2025-12-01 16:12:55 - hider moved with object to (8,6), object at (8,7)
+[INFO] 2025-12-01 16:12:55 - hider released object (moved without it)
+[INFO] 2025-12-01 16:12:55 - hider grabbed block at (7, 7)
+[INFO] 2025-12-01 16:12:55 - hider released object (moved without it)
+[INFO] 2025-12-01 16:12:56 - 🎯 CAPTURED! Seeker caught Hider at step 72!
+[INFO] 2025-12-01 16:12:56 - hider grabbed block at (6, 7)
+[INFO] 2025-12-01 16:12:56 - hider released object (moved without it)
+[INFO] 2025-12-01 16:12:57 - SEEKER SPAWNED at step 40! Seeking phase begins!
+[INFO] 2025-12-01 16:12:57 - 🎯 CAPTURED! Seeker caught Hider at step 115!
+[INFO] 2025-12-01 16:12:57 - hider grabbed block at (6, 7)
+[INFO] 2025-12-01 16:12:57 - hider moved with object to (6,9), object at (6,8)
+[INFO] 2025-12-01 16:12:57 - Hider locked block at (6, 8)
+[INFO] 2025-12-01 16:12:57 - hider moved with object to (6,10), object at (6,9)
+[INFO] 2025-12-01 16:12:57 - hider released object (moved without it)

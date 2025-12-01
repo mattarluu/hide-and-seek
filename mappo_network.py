@@ -39,81 +39,63 @@ class SpatialFeatureExtractor(nn.Module):
         self.fc_combine = nn.Linear(64 + conv_output_size, feature_dim)
         
     def create_spatial_grid(self, obs, agent_key, env):
-        """
-        Create a 5-channel spatial representation:
-        0: Agent position
-        1: Other agent position
-        2: Blocks
-        3: Ramp
-        4: Walls
-        """
-        batch_size = 1  # Single environment for now
-        grid = torch.zeros(batch_size, 5, self.grid_size, self.grid_size)
-        
+        batch_size = 1
+        device = self.pos_embed.weight.device
+
+        grid = torch.zeros(batch_size, 5, self.grid_size, self.grid_size, device=device)
+
         # Channel 0: Current agent position
         x, y, _, z = obs[agent_key]["state"]
-        if x >= 0:  # Valid position
-            grid[0, 0, int(y), int(x)] = 1.0 + z * 0.5  # Encode height
-        
-        # Channel 1: Other agent position
+        if x >= 0:
+            grid[0, 0, int(y), int(x)] = 1.0 + z * 0.5
+
+        # Channel 1: Other agent
         other_key = "seeker" if agent_key == "hider" else "hider"
         ox, oy, _, oz = obs[other_key]["state"]
         if ox >= 0:
             grid[0, 1, int(oy), int(ox)] = 1.0 + oz * 0.5
-        
+
         # Channel 2: Blocks
         for block in env.blocks:
             bx, by = block.position
-            grid[0, 2, by, bx] = 1.0
-            if block.locked:
-                grid[0, 2, by, bx] = 1.5  # Indicate locked blocks
-        
+            val = 1.5 if block.locked else 1.0
+            grid[0, 2, by, bx] = val
+
         # Channel 3: Ramp
         if env.ramp:
             rx, ry = env.ramp.position
             grid[0, 3, ry, rx] = 1.0
-        
+
         # Channel 4: Walls
-        for wall_cell in env.room.wall_cells:
-            wx, wy = wall_cell
+        for wx, wy in env.room.wall_cells:
             grid[0, 4, wy, wx] = 1.0
-        
+
         return grid
     
     def forward(self, obs, agent_key, env):
-        """
-        Extract features from observation.
-        
-        Args:
-            obs: Environment observation dict
-            agent_key: "hider" or "seeker"
-            env: Environment instance for accessing full state
-            
-        Returns:
-            features: Tensor of shape (feature_dim,)
-        """
         # Position encoding
-        state = torch.FloatTensor(obs[agent_key]["state"])
+        device = self.pos_embed.weight.device
+        state = torch.as_tensor(obs[agent_key]["state"], dtype=torch.float32, device=device)
+
         pos_features = F.relu(self.pos_embed(state))
-        
+
         # Spatial grid encoding
         spatial_grid = self.create_spatial_grid(obs, agent_key, env)
-        
-        # Convolutional feature extraction
+
+        # Conv layers
         x = F.relu(self.conv1(spatial_grid))
         x = self.pool(x)
         x = F.relu(self.conv2(x))
         x = self.pool(x)
         x = F.relu(self.conv3(x))
         x = self.pool(x)
-        
-        # Flatten
+
         spatial_features = x.view(x.size(0), -1)
-        
-        # Combine features
+
+        # Combine
         combined = torch.cat([pos_features.unsqueeze(0), spatial_features], dim=1)
         features = F.relu(self.fc_combine(combined))
-        
+
         return features.squeeze(0)
 
 
@@ -215,11 +197,13 @@ class MAPPOAgent:
         self.critic = CriticNetwork().to(device)
         
     def get_features(self, obs, agent_key, env):
-        """Extract features for a specific agent."""
         if agent_key == "hider":
-            return self.hider_feature_extractor(obs, agent_key, env)
+            feats = self.hider_feature_extractor(obs, agent_key, env)
         else:
-            return self.seeker_feature_extractor(obs, agent_key, env)
+            feats = self.seeker_feature_extractor(obs, agent_key, env)
+
+        # Ensure correct device
+        return feats.to(self.device)
     
     def get_action(self, obs, agent_key, env, deterministic=False):
         """Get action for a specific agent."""

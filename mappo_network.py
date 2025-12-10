@@ -1,8 +1,5 @@
 """
-mappo_network.py
-
-Neural network architectures for MAPPO in hide and seek.
-Optimized for batch processing.
+mappo_network.py - VERSIÃ“N OPTIMIZADA (BATCHING)
 """
 
 import torch
@@ -13,118 +10,108 @@ import numpy as np
 
 
 class SpatialFeatureExtractor(nn.Module):
-    """
-    Extracts spatial features from the environment.
-    Optimized: Caches static maps and uses vectorized operations.
-    """
     def __init__(self, grid_size=20, feature_dim=128):
         super().__init__()
         self.grid_size = grid_size
         self.feature_dim = feature_dim
-        
-        # Cache for static elements (walls, ramps)
-        self.static_grid_cache = None
-        
+        # Reducción de dimensionalidad para posición (x, y, vx, vy)
         self.pos_embed = nn.Linear(4, 64)
+        
+        # CNN para el grid
         self.conv1 = nn.Conv2d(5, 32, kernel_size=3, padding=1)
         self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
         self.conv3 = nn.Conv2d(64, 64, kernel_size=3, padding=1)
         self.pool = nn.MaxPool2d(2, 2)
         
-        # 20 -> 10 -> 5 -> 2
+        # Calcular tamaño de salida de la CNN
+        # 20 -> 10 -> 5 -> 2 (aprox dependiendo del padding/pool exacto)
+        # Con 3 pools de 2x2 sobre 20x20:
+        # P1: 20->10, P2: 10->5, P3: 5->2.
+        # Output final: 64 canales * 2 * 2
         conv_output_size = 64 * 2 * 2
-        self.fc_combine = nn.Linear(64 + conv_output_size, feature_dim)
-
-    def _build_static_cache(self, env, device):
-        """Builds the wall and ramp channels once."""
-        cache = torch.zeros(5, self.grid_size, self.grid_size, device=device)
         
-        # Channel 3: Ramp
-        if env.ramp:
-            rx, ry = env.ramp.position
-            cache[3, ry, rx] = 1.0
-            
-        # Channel 4: Walls
-        # Usamos listas de python para extraer coordenadas y asignarlas de golpe
-        if env.room.wall_cells:
-            wx = [w[0] for w in env.room.wall_cells]
-            wy = [w[1] for w in env.room.wall_cells]
-            cache[4, wy, wx] = 1.0
-            
-        self.static_grid_cache = cache
-
-    def process_batch(self, obs_list, agent_key, env):
-        """
-        Process a list of observations into a batch tensor efficiently.
-        HIGH PERFORMANCE VERSION.
-        """
+        self.fc_combine = nn.Linear(64 + conv_output_size, feature_dim)
+    
+    def process_batch_obs(self, obs_list, agent_key, env):
+        """Versión VECTORIZADA y optimizada."""
         device = next(self.parameters()).device
         batch_size = len(obs_list)
         
-        # 1. Initialize Cache if needed
-        if self.static_grid_cache is None:
-            self._build_static_cache(env, device)
-            
-        # 2. Fast State Extraction (numpy -> tensor is faster than loop of tensors)
-        # Extract states into a numpy array first to avoid loop overhead
-        raw_states = np.array([o[agent_key]["state"] for o in obs_list], dtype=np.float32)
-        states = torch.tensor(raw_states, device=device)
+        # 1. Pre-alocar el grid
+        grids = np.zeros((batch_size, 5, self.grid_size, self.grid_size), dtype=np.float32)
+        
+        # 2. Canales estáticos (Muros y bloques)
+        static_channels = np.zeros((3, self.grid_size, self.grid_size), dtype=np.float32)
+        
+        for block in env.blocks:
+            bx, by = int(block.position[0]), int(block.position[1])
+            val = 1.5 if block.locked else 1.0
+            if 0 <= bx < self.grid_size and 0 <= by < self.grid_size:
+                static_channels[0, by, bx] = val
+        
+        if env.ramp:
+            rx, ry = int(env.ramp.position[0]), int(env.ramp.position[1])
+            if 0 <= rx < self.grid_size and 0 <= ry < self.grid_size:
+                static_channels[1, ry, rx] = 1.0
+                
+        for wx, wy in env.room.wall_cells:
+            if 0 <= wx < self.grid_size and 0 <= wy < self.grid_size:
+                static_channels[2, int(wy), int(wx)] = 1.0
 
-        # 3. Clone static grid (Walls/Ramps are already there)
-        # Expansion: (1, 5, H, W) -> (B, 5, H, W) without copying memory excessively
-        grids = self.static_grid_cache.unsqueeze(0).repeat(batch_size, 1, 1, 1).clone()
-        
-        # 4. Vectorized Scatter for Agents (No loops!)
-        batch_idx = torch.arange(batch_size, device=device)
-        
-        # Current Agent (Channel 0)
-        curr_x = states[:, 0].long()
-        curr_y = states[:, 1].long()
-        curr_z = states[:, 3]
-        valid_curr = curr_x >= 0
-        
-        if valid_curr.any():
-            # Vectorized assignment
-            grids[batch_idx[valid_curr], 0, curr_y[valid_curr], curr_x[valid_curr]] = 1.0 + curr_z[valid_curr] * 0.5
-            
-        # Other Agent (Channel 1)
+        # Copiar canales estáticos a todo el batch
+        grids[:, 2:] = static_channels
+
+        # 3. Procesamiento de agentes
         other_key = "seeker" if agent_key == "hider" else "hider"
-        other_raw = np.array([o[other_key]["state"] for o in obs_list], dtype=np.float32)
-        other_states = torch.tensor(other_raw, device=device)
         
-        other_x = other_states[:, 0].long()
-        other_y = other_states[:, 1].long()
-        other_z = other_states[:, 3]
-        valid_other = other_x >= 0
+        # Extraer estados con numpy (mucho más rápido que loops)
+        all_states = np.array([o[agent_key]["state"] for o in obs_list], dtype=np.float32)
+        other_states = np.array([o[other_key]["state"] for o in obs_list], dtype=np.float32)
         
-        if valid_other.any():
-            grids[batch_idx[valid_other], 1, other_y[valid_other], other_x[valid_other]] = 1.0 + other_z[valid_other] * 0.5
+        batch_idx = np.arange(batch_size)
+        
+        # --- Agente Principal ---
+        x, y = all_states[:, 0], all_states[:, 1]
+        z = all_states[:, 3]
+        ix, iy = x.astype(int), y.astype(int)
+        
+        mask = (x >= 0) & (ix >= 0) & (ix < self.grid_size) & (iy >= 0) & (iy < self.grid_size)
+        if mask.any():
+            grids[batch_idx[mask], 0, iy[mask], ix[mask]] = 1.0 + z[mask] * 0.5
+            
+        # --- Oponente ---
+        ox, oy = other_states[:, 0], other_states[:, 1]
+        oz = other_states[:, 3]
+        iox, ioy = ox.astype(int), oy.astype(int)
+        
+        mask_o = (ox >= 0) & (iox >= 0) & (iox < self.grid_size) & (ioy >= 0) & (ioy < self.grid_size)
+        if mask_o.any():
+            grids[batch_idx[mask_o], 1, ioy[mask_o], iox[mask_o]] = 1.0 + oz[mask_o] * 0.5
 
-        # 5. Blocks (Channel 2) - Still needs a loop as block count varies, but minimized
-        # If blocks are few (1-3), this loop is negligible compared to walls
-        for i, obs in enumerate(obs_list):
-            # Assuming logic from original: pulling from env.blocks is risky if parallel envs diverge.
-            # Ideally obs should contain block info. Assuming env.blocks matches for now.
-            for block in env.blocks:
-                bx, by = block.position
-                val = 1.5 if block.locked else 1.0
-                grids[i, 2, by, bx] = val
-        
-        return states, grids
+        return torch.tensor(grids, device=device), torch.tensor(all_states, device=device)
     
-    def forward(self, inputs):
-        state_tensor, grid_tensor = inputs
-        pos_features = F.relu(self.pos_embed(state_tensor))
+    def forward(self, obs_input, agent_key, env):
+        # Esta es la función que faltaba
+        if isinstance(obs_input, list):
+            spatial_grid, state = self.process_batch_obs(obs_input, agent_key, env)
+        else:
+            spatial_grid, state = self.process_batch_obs([obs_input], agent_key, env)
         
-        x = F.relu(self.conv1(grid_tensor))
+        # Procesar características de posición
+        pos_features = F.relu(self.pos_embed(state))
+        
+        # Procesar Grid con CNN
+        x = F.relu(self.conv1(spatial_grid))
         x = self.pool(x)
         x = F.relu(self.conv2(x))
         x = self.pool(x)
         x = F.relu(self.conv3(x))
         x = self.pool(x)
         
+        # Aplanar y combinar
         spatial_features = x.view(x.size(0), -1)
         combined = torch.cat([pos_features, spatial_features], dim=1)
+        
         features = F.relu(self.fc_combine(combined))
         return features
 
@@ -135,7 +122,7 @@ class ActorNetwork(nn.Module):
         self.fc1 = nn.Linear(feature_dim, hidden_dim)
         self.fc2 = nn.Linear(hidden_dim, hidden_dim)
         self.action_head = nn.Linear(hidden_dim, action_dim)
-        
+    
     def forward(self, features):
         x = F.relu(self.fc1(features))
         x = F.relu(self.fc2(x))
@@ -143,25 +130,14 @@ class ActorNetwork(nn.Module):
         return F.softmax(action_logits, dim=-1)
     
     def get_action(self, features, deterministic=False):
-        # Handle batch or single
-        if features.dim() == 1:
-            features = features.unsqueeze(0)
-            
         action_probs = self.forward(features)
         dist = Categorical(action_probs)
-        
         if deterministic:
             action = torch.argmax(action_probs, dim=-1)
         else:
             action = dist.sample()
-        
         log_prob = dist.log_prob(action)
         entropy = dist.entropy()
-        
-        # If single input, return scalars
-        if features.size(0) == 1:
-            return action.item(), log_prob, entropy
-        
         return action, log_prob, entropy
 
 
@@ -171,7 +147,7 @@ class CriticNetwork(nn.Module):
         self.fc1 = nn.Linear(feature_dim * 2, hidden_dim)
         self.fc2 = nn.Linear(hidden_dim, hidden_dim)
         self.value_head = nn.Linear(hidden_dim, 1)
-        
+    
     def forward(self, hider_features, seeker_features):
         combined = torch.cat([hider_features, seeker_features], dim=-1)
         x = F.relu(self.fc1(combined))
@@ -188,26 +164,36 @@ class MAPPOAgent:
         self.hider_actor = ActorNetwork(action_dim=action_dim).to(device)
         self.seeker_actor = ActorNetwork(action_dim=action_dim).to(device)
         self.critic = CriticNetwork().to(device)
-        
+    
     def get_features(self, obs, agent_key, env):
-        # Legacy/Single support
-        extractor = self.hider_feature_extractor if agent_key == "hider" else self.seeker_feature_extractor
-        inputs = extractor.process_batch([obs], agent_key, env)
-        return extractor(inputs) # Returns batch 1
+        if agent_key == "hider":
+            return self.hider_feature_extractor(obs, agent_key, env)
+        else:
+            return self.seeker_feature_extractor(obs, agent_key, env)
     
     def get_action(self, obs, agent_key, env, deterministic=False):
         features = self.get_features(obs, agent_key, env)
-        actor = self.hider_actor if agent_key == "hider" else self.seeker_actor
-        return actor.get_action(features.squeeze(0), deterministic)
+        if agent_key == "hider":
+            return self.hider_actor.get_action(features, deterministic)
+        else:
+            return self.seeker_actor.get_action(features, deterministic)
     
     def get_value(self, obs, env):
-        hider_feat = self.get_features(obs, "hider", env)
-        if obs["seeker"]["state"][0] < 0:
-            seeker_feat = torch.zeros_like(hider_feat).to(self.device)
+        hider_features = self.get_features(obs, "hider", env)
+        if isinstance(obs, list):
+            seeker_active_mask = torch.tensor(
+                [o["seeker"]["state"][0] >= 0 for o in obs], 
+                device=self.device, dtype=torch.float32
+            ).unsqueeze(1)
+            seeker_features = self.get_features(obs, "seeker", env)
+            seeker_features = seeker_features * seeker_active_mask
         else:
-            seeker_feat = self.get_features(obs, "seeker", env)
-        return self.critic(hider_feat, seeker_feat)
-
+            if obs["seeker"]["state"][0] < 0:
+                seeker_features = torch.zeros_like(hider_features).to(self.device)
+            else:
+                seeker_features = self.get_features(obs, "seeker", env)
+        return self.critic(hider_features, seeker_features)
+    
     def get_all_parameters(self):
         params = []
         params.extend(list(self.hider_feature_extractor.parameters()))

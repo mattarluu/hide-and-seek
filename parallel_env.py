@@ -1,220 +1,200 @@
 """
 parallel_env.py
-
-Parallel environment wrapper for running multiple hide and seek environments.
-Optimized for multi-core systems.
+Wrapper de entornos paralelos con diagnóstico avanzado.
 """
 
 import numpy as np
 from multiprocessing import Process, Pipe
-import copy
+import sys
+import os
+import time
 
-
-def worker(remote, parent_remote, env_fn):
-    """
-    Worker process for running a single environment.
-    
-    Args:
-        remote: Remote connection for this worker
-        parent_remote: Parent connection
-        env_fn: Function to create environment
-    """
+def worker(rank, remote, parent_remote, env_fn, log_dir):
+    """Worker process."""
     parent_remote.close()
-    env = env_fn()
     
+    # Suprimir output del entorno si es ruidoso (opcional)
+    # sys.stdout = open(os.devnull, 'w')
+
+    env = None
     try:
+        env = env_fn()
+        remote.send(('ready', rank))
+        
         while True:
             cmd, data = remote.recv()
             
             if cmd == 'step':
-                obs, done, rewards = env.step(data)
-                if done:
-                    # Auto-reset on episode end
-                    obs = env.reset()
-                remote.send((obs, done, rewards))
+                try:
+                    obs, done, rewards = env.step(data)
+                    if done:
+                        obs = env.reset()
+                    remote.send(('result', (obs, done, rewards)))
+                except Exception as e:
+                    remote.send(('error', f"Step error in worker {rank}: {str(e)}"))
+                    break
             
             elif cmd == 'reset':
-                obs = env.reset()
-                remote.send(obs)
+                try:
+                    obs = env.reset()
+                    remote.send(('result', obs))
+                except Exception as e:
+                    remote.send(('error', f"Reset error in worker {rank}: {str(e)}"))
+                    break
             
             elif cmd == 'close':
-                remote.close()
                 break
-            
             elif cmd == 'get_env':
-                # Send environment state (for observation processing)
-                remote.send(env)
-            
+                remote.send(('result', env))
             else:
-                raise NotImplementedError(f"Command {cmd} not implemented")
-    
+                pass
+                
     except KeyboardInterrupt:
-        print("Worker interrupted")
+        pass
+    except Exception as e:
+        try:
+            remote.send(('error', f"Worker {rank} crash: {str(e)}"))
+        except:
+            pass
     finally:
-        env.close() if hasattr(env, 'close') else None
-
+        if env and hasattr(env, 'close'):
+            try:
+                env.close()
+            except:
+                pass
+        try:
+            remote.close()
+        except:
+            pass
 
 class ParallelEnv:
-    """
-    Parallel environment wrapper that runs multiple environments in separate processes.
-    """
-    def __init__(self, env_fns):
-        """
-        Initialize parallel environments.
-        
-        Args:
-            env_fns: List of functions that create environments
-        """
+    def __init__(self, env_fns, log_dir='./logs'):
         self.n_envs = len(env_fns)
         self.waiting = False
         self.closed = False
         
-        # Create pipes for communication
         self.remotes, self.work_remotes = zip(*[Pipe() for _ in range(self.n_envs)])
-        
-        # Start worker processes
         self.processes = []
-        for work_remote, remote, env_fn in zip(self.work_remotes, self.remotes, env_fns):
-            args = (work_remote, remote, env_fn)
+        
+        print(f"Starting {self.n_envs} workers...")
+        for i, (work_remote, remote, env_fn) in enumerate(zip(self.work_remotes, self.remotes, env_fns)):
+            args = (i, work_remote, remote, env_fn, log_dir)
             process = Process(target=worker, args=args, daemon=True)
             process.start()
             self.processes.append(process)
             work_remote.close()
         
-        # Get initial environment for metadata
-        self.remotes[0].send(('get_env', None))
-        self.env_sample = self.remotes[0].recv()
-    
-    def step_async(self, actions):
-        """
-        Send step commands to all environments asynchronously.
+        # Esperar confirmación de inicio
+        print(f"Waiting for workers to come online...")
+        ready_count = 0
+        for i, remote in enumerate(self.remotes):
+            if remote.poll(timeout=30.0):
+                msg = remote.recv()
+                if msg[0] == 'ready':
+                    ready_count += 1
+                elif msg[0] == 'error':
+                    self.close()
+                    raise RuntimeError(f"Worker {i} error on start: {msg[1]}")
+            else:
+                self.close()
+                raise TimeoutError(f"Worker {i} timed out on start")
         
-        Args:
-            actions: List of action dicts for each environment
-        """
+        print(f"✓ All {self.n_envs} workers ready!")
+
+    def step_async(self, actions):
         if self.waiting:
             raise RuntimeError("Already waiting for step results")
-        
+            
         for remote, action in zip(self.remotes, actions):
             remote.send(('step', action))
-        
         self.waiting = True
     
-    def step_wait(self):
-        """
-        Wait for step results from all environments.
-        
-        Returns:
-            observations: List of observations
-            dones: List of done flags
-            rewards: List of reward dicts
-        """
+    def step_wait(self, timeout=300.0):
+        """Espera inteligente: monitoriza quién falta."""
         if not self.waiting:
             raise RuntimeError("Not waiting for step results")
         
-        results = [remote.recv() for remote in self.remotes]
+        results = [None] * self.n_envs
+        waiting_for = set(range(self.n_envs))
+        start_time = time.time()
+        last_print = start_time
+        
+        while len(waiting_for) > 0:
+            # Chequear timeout global
+            now = time.time()
+            if now - start_time > timeout:
+                self.close()
+                raise TimeoutError(f"TIMEOUT CRÍTICO: Los workers {list(waiting_for)} están bloqueados.")
+            
+            # Imprimir advertencia si tarda más de 5 segundos
+            if now - start_time > 5.0 and now - last_print > 5.0:
+                print(f"\n[⚠️ Alerta] Esperando a workers: {list(waiting_for)}... (Posible bucle infinito en Env)")
+                last_print = now
+            
+            # Revisar mensajes de workers pendientes
+            for i in list(waiting_for):
+                if self.remotes[i].poll(): 
+                    try:
+                        msg = self.remotes[i].recv()
+                        if msg[0] == 'result':
+                            results[i] = msg[1]
+                            waiting_for.remove(i)
+                        elif msg[0] == 'error':
+                            self.close()
+                            raise RuntimeError(f"Worker {i} reportó error: {msg[1]}")
+                    except EOFError:
+                        self.close()
+                        raise RuntimeError(f"Worker {i} cerró la conexión inesperadamente.")
+            
+            # Pequeña pausa para no quemar la CPU
+            time.sleep(0.005)
+                
         self.waiting = False
-        
         observations, dones, rewards = zip(*results)
-        
         return list(observations), list(dones), list(rewards)
     
     def step(self, actions):
-        """
-        Perform a step in all environments.
-        
-        Args:
-            actions: List of action dicts for each environment
-            
-        Returns:
-            observations: List of observations
-            dones: List of done flags
-            rewards: List of reward dicts
-        """
         self.step_async(actions)
         return self.step_wait()
     
     def reset(self):
-        """
-        Reset all environments.
-        
-        Returns:
-            observations: List of initial observations
-        """
         for remote in self.remotes:
             remote.send(('reset', None))
         
-        observations = [remote.recv() for remote in self.remotes]
-        return observations
+        results = []
+        for i, remote in enumerate(self.remotes):
+            # Timeout generoso para reset
+            if remote.poll(timeout=60.0):
+                msg = remote.recv()
+                if msg[0] == 'result':
+                    results.append(msg[1])
+                elif msg[0] == 'error':
+                    raise RuntimeError(f"Worker {i} reset error: {msg[1]}")
+            else:
+                raise TimeoutError(f"Worker {i} timeout in reset")
+        return results
     
     def close(self):
-        """Close all environments and worker processes."""
-        if self.closed:
-            return
-        
-        if self.waiting:
-            # Wait for pending operations
-            self.step_wait()
-        
+        if self.closed: return
         for remote in self.remotes:
-            remote.send(('close', None))
-        
-        for process in self.processes:
-            process.join()
-        
+            try: remote.send(('close', None))
+            except: pass
+        for p in self.processes:
+            p.join(timeout=1)
+            if p.is_alive(): 
+                try: p.terminate()
+                except: pass
         self.closed = True
-    
+        
     def __len__(self):
-        """Return number of parallel environments."""
         return self.n_envs
     
     def __del__(self):
-        """Cleanup when object is destroyed."""
         if not self.closed:
             self.close()
 
-
+# --- ESTA ES LA FUNCIÓN QUE FALTABA ---
 def make_parallel_env(env_fn, n_envs):
-    """
-    Create parallel environments.
-    
-    Args:
-        env_fn: Function to create a single environment
-        n_envs: Number of parallel environments
-        
-    Returns:
-        parallel_env: ParallelEnv instance
-    """
+    """Crear entorno paralelo."""
     env_fns = [env_fn for _ in range(n_envs)]
     return ParallelEnv(env_fns)
-
-
-if __name__ == "__main__":
-    # Test parallel environments
-    from env.hide_and_seek_env import HideAndSeekEnv
-    
-    def env_fn():
-        return HideAndSeekEnv()
-    
-    print("Creating 4 parallel environments...")
-    parallel_env = make_parallel_env(env_fn, n_envs=4)
-    
-    print("Resetting environments...")
-    obs_list = parallel_env.reset()
-    print(f"Got {len(obs_list)} observations")
-    
-    print("Taking random steps...")
-    for _ in range(5):
-        actions = [
-            {
-                "hider": np.random.randint(0, 10),
-                "seeker": np.random.randint(0, 10)
-            }
-            for _ in range(4)
-        ]
-        obs_list, dones, rewards = parallel_env.step(actions)
-        print(f"Step completed. Dones: {dones}")
-    
-    print("Closing environments...")
-    parallel_env.close()
-    print("Test complete!")
